@@ -32,9 +32,10 @@ import com.mongodb.client.MongoCollection;
 public class indice{
 
     MongoClient mongoClient = new MongoClient();
-    DB db = mongoClient.getDB("twitter6");
-    DBCollection collection = db.getCollection("statusJSONImpl");
+    DB db = mongoClient.getDB("twitter7");
+    DBCollection collection = db.getCollection("futbol");
     DBCursor cursor = collection.find();
+
 
 
     public  void indexar(){
