@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d5c7438-b606-4ed1-b980-6169d02c130c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
+    <list default="true" id="2ad9124b-84e0-44f2-91c6-428bca08ef71" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Taller2-TBD/src/main/java/Taller1db/TBD/indice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Taller2-TBD/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Taller2-TBD/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Taller2-TBD/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Taller2-TBD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Taller2-TBD/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -26,18 +22,44 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="WebConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Taller2-TBD/src/main/java/Taller1db/TBD/Entities/WebConfig.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="WebSecurityConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Taller2-TBD/src/main/java/Taller1db/TBD/Entities/WebSecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="indice.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Taller2-TBD/src/main/java/Taller1db/TBD/indice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="60" column="57" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="/opt/gradle/gradle-4.6" />
+        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4" />
       </map>
     </option>
     <option name="myGradleVersions">
       <map>
-        <entry key="$PROJECT_DIR$" value="4.6" />
+        <entry key="$PROJECT_DIR$" value="4.4" />
       </map>
     </option>
     <option name="availableProjects">
@@ -45,14 +67,14 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="Sprint1" />
+              <option name="name" value="spring1" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="Sprint1" />
+                <option name="name" value="spring1" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
             </list>
@@ -71,27 +93,27 @@
                 <option name="name" value="init" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'Sprint1'. [incubating]" />
+                <option name="description" value="Displays the components produced by root project 'spring1'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="components" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'Sprint1'." />
+                <option name="description" value="Displays the sub-projects of root project 'spring1'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="projects" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the dependent components of components in root project 'Sprint1'. [incubating]" />
+                <option name="description" value="Displays the dependent components of components in root project 'spring1'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependentComponents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'Sprint1'." />
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'spring1'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="buildEnvironment" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'Sprint1'." />
+                <option name="description" value="Displays the insight into a specific dependency in root project 'spring1'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencyInsight" />
               </ExternalTaskPojo>
@@ -101,7 +123,7 @@
                 <option name="name" value="wrapper" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'Sprint1'." />
+                <option name="description" value="Displays all dependencies declared in root project 'spring1'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencies" />
               </ExternalTaskPojo>
@@ -111,17 +133,17 @@
                 <option name="name" value="help" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'Sprint1'. [incubating]" />
+                <option name="description" value="Displays the configuration model of root project 'spring1'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="model" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'Sprint1'." />
+                <option name="description" value="Displays the properties of root project 'spring1'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'Sprint1'." />
+                <option name="description" value="Displays the tasks runnable from root project 'spring1'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
@@ -132,7 +154,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="1524372969000" />
+        <entry key="$PROJECT_DIR$" value="1526086987000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
       </map>
     </option>
@@ -152,154 +174,83 @@
                   </entry>
                 </map>
               </option>
-              <option name="name" value="Sprint1" />
+              <option name="name" value="spring1" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="/opt/gradle/gradle-4.6/src/publish" />
-                  <option value="/opt/gradle/gradle-4.6/src/platform-native" />
-                  <option value="/opt/gradle/gradle-4.6/src/antlr" />
-                  <option value="/opt/gradle/gradle-4.6/src/testing-native" />
-                  <option value="/opt/gradle/gradle-4.6/src/model-core" />
-                  <option value="/opt/gradle/gradle-4.6/src/ivy" />
-                  <option value="/opt/gradle/gradle-4.6/src/scala" />
-                  <option value="/opt/gradle/gradle-4.6/src/test-kit" />
-                  <option value="/opt/gradle/gradle-4.6/src/resources-s3" />
-                  <option value="/opt/gradle/gradle-4.6/src/persistent-cache" />
-                  <option value="/opt/gradle/gradle-4.6/src/installation-beacon" />
-                  <option value="/opt/gradle/gradle-4.6/src/javascript" />
-                  <option value="/opt/gradle/gradle-4.6/src/build-cache" />
-                  <option value="/opt/gradle/gradle-4.6/src/jacoco" />
-                  <option value="/opt/gradle/gradle-4.6/src/osgi" />
-                  <option value="/opt/gradle/gradle-4.6/src/messaging" />
-                  <option value="/opt/gradle/gradle-4.6/src/wrapper" />
-                  <option value="/opt/gradle/gradle-4.6/src/version-control" />
-                  <option value="/opt/gradle/gradle-4.6/src/logging" />
-                  <option value="/opt/gradle/gradle-4.6/src/launcher" />
-                  <option value="/opt/gradle/gradle-4.6/src/testing-junit-platform" />
-                  <option value="/opt/gradle/gradle-4.6/src/core" />
-                  <option value="/opt/gradle/gradle-4.6/src/ide-play" />
-                  <option value="/opt/gradle/gradle-4.6/src/testing-jvm" />
-                  <option value="/opt/gradle/gradle-4.6/src/announce" />
-                  <option value="/opt/gradle/gradle-4.6/src/language-scala" />
-                  <option value="/opt/gradle/gradle-4.6/src/tooling-api" />
-                  <option value="/opt/gradle/gradle-4.6/src/tooling-api-builders" />
-                  <option value="/opt/gradle/gradle-4.6/src/internal-android-performance-testing" />
-                  <option value="/opt/gradle/gradle-4.6/src/base-services" />
-                  <option value="/opt/gradle/gradle-4.6/src/jvm-services" />
-                  <option value="/opt/gradle/gradle-4.6/src/reporting" />
-                  <option value="/opt/gradle/gradle-4.6/src/testing-base" />
-                  <option value="/opt/gradle/gradle-4.6/src/core-api" />
-                  <option value="/opt/gradle/gradle-4.6/src/ear" />
-                  <option value="/opt/gradle/gradle-4.6/src/platform-play" />
-                  <option value="/opt/gradle/gradle-4.6/src/process-services" />
-                  <option value="/opt/gradle/gradle-4.6/src/resources-http" />
-                  <option value="/opt/gradle/gradle-4.6/src/language-java" />
-                  <option value="/opt/gradle/gradle-4.6/src/model-groovy" />
-                  <option value="/opt/gradle/gradle-4.6/src/internal-integ-testing" />
-                  <option value="/opt/gradle/gradle-4.6/src/ide" />
-                  <option value="/opt/gradle/gradle-4.6/src/language-groovy" />
-                  <option value="/opt/gradle/gradle-4.6/src/language-native" />
-                  <option value="/opt/gradle/gradle-4.6/src/resources" />
-                  <option value="/opt/gradle/gradle-4.6/src/workers" />
-                  <option value="/opt/gradle/gradle-4.6/src/plugin-development" />
-                  <option value="/opt/gradle/gradle-4.6/src/native" />
-                  <option value="/opt/gradle/gradle-4.6/src/plugin-use" />
-                  <option value="/opt/gradle/gradle-4.6/src/language-jvm" />
-                  <option value="/opt/gradle/gradle-4.6/src/build-cache-http" />
-                  <option value="/opt/gradle/gradle-4.6/src/ide-native" />
-                  <option value="/opt/gradle/gradle-4.6/src/resources-sftp" />
-                  <option value="/opt/gradle/gradle-4.6/src/signing" />
-                  <option value="/opt/gradle/gradle-4.6/src/build-init" />
-                  <option value="/opt/gradle/gradle-4.6/src/dependency-management" />
-                  <option value="/opt/gradle/gradle-4.6/src/internal-testing" />
-                  <option value="/opt/gradle/gradle-4.6/src/maven" />
-                  <option value="/opt/gradle/gradle-4.6/src/cli" />
-                  <option value="/opt/gradle/gradle-4.6/src/base-services-groovy" />
-                  <option value="/opt/gradle/gradle-4.6/src/platform-jvm" />
-                  <option value="/opt/gradle/gradle-4.6/src/resources-gcs" />
-                  <option value="/opt/gradle/gradle-4.6/src/diagnostics" />
-                  <option value="/opt/gradle/gradle-4.6/src/plugins" />
-                  <option value="/opt/gradle/gradle-4.6/src/code-quality" />
-                  <option value="/opt/gradle/gradle-4.6/src/platform-base" />
-                  <option value="/opt/gradle/gradle-4.6/src/internal-performance-testing" />
-                  <option value="/opt/gradle/gradle-4.6/src/build-comparison" />
-                  <option value="/opt/gradle/gradle-4.6/src/composite-builds" />
-                  <option value="/opt/gradle/gradle-4.6/src/build-option" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-jvm-services-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-model-core-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/ant-1.9.9.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-core-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-core-api-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-model-groovy-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-native-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-base-services-groovy-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-build-cache-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-messaging-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-tooling-api-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-launcher-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-resources-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-process-services-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-cli-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-base-services-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-installation-beacon-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/ant-launcher-1.9.9.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-build-option-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-persistent-cache-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-kotlin-dsl-tooling-models-0.15.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-docs-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-kotlin-dsl-0.15.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-wrapper-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-logging-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-kotlin-dsl-tooling-builders-0.15.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/gradle-runtime-api-info-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/groovy-all-2.4.12.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-language-native-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-resources-sftp-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-osgi-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-workers-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-language-scala-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-antlr-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/ivy-2.2.0.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-ide-play-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-ide-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-resources-gcs-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-build-cache-http-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-code-quality-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-language-java-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-build-comparison-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-publish-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-testing-jvm-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-reporting-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-ivy-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-javascript-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-language-jvm-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-platform-jvm-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-tooling-api-builders-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-diagnostics-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-testing-native-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-ear-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-plugin-development-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-signing-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-test-kit-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-plugin-use-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-composite-builds-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-jacoco-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-resources-http-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-scala-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-build-init-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-language-groovy-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-dependency-management-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-testing-junit-platform-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-platform-base-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-plugins-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-ide-native-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-resources-s3-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-testing-base-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-announce-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-platform-native-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-version-control-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-maven-4.6.jar" />
-                  <option value="/opt/gradle/gradle-4.6/lib/plugins/gradle-platform-play-4.6.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-wrapper-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-base-services-groovy-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-installation-beacon-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-resources-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-base-services-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-kotlin-dsl-0.13.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-core-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-kotlin-dsl-tooling-models-0.13.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-messaging-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/ant-launcher-1.9.9.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/ant-1.9.9.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-launcher-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-core-api-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-runtime-api-info-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-native-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-model-groovy-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-kotlin-dsl-tooling-builders-0.13.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-persistent-cache-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-model-core-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-process-services-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-tooling-api-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/groovy-all-2.4.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-jvm-services-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-build-cache-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-build-option-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-docs-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-cli-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/gradle-logging-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-language-groovy-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-ide-play-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-plugin-development-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-code-quality-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-test-kit-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-signing-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-build-init-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-ear-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-dependency-management-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-testing-native-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-resources-s3-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-build-cache-http-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-platform-play-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-resources-http-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-plugins-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-ide-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-platform-jvm-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-plugin-use-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-ivy-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-ide-native-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-scala-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-announce-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-language-native-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-resources-sftp-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-testing-jvm-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-platform-base-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-platform-native-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-diagnostics-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-javascript-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-resources-gcs-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-composite-builds-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-build-comparison-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-testing-base-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-language-java-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-tooling-api-builders-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-language-jvm-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-version-control-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-publish-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-maven-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-osgi-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-reporting-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-language-scala-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-workers-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-antlr-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/gradle-jacoco-4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-bin/bgaq7vklkazwgxox0hdadxbvi/gradle-4.4/lib/plugins/ivy-2.2.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -311,78 +262,79 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/../Spring 1 - Ejemplos/SentimentAnalysis-master" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../Spring 1 - Ejemplos/buscadorLibros" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../Spring 1 - Ejemplos/mongodb-master" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../Spring 1 - Ejemplos/tweetcapture-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Descargas/artifacts/sakila-backend-spring" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../buscadorLibros" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../mongo" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../proyecto" value="PREVIEW" />
         <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
-        <entry key="$PROJECT_DIR$/../Taller2" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../Taller2/Taller2-Back" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../Taller2/Taller2-TBD" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../lab-TBD" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../tbd-2/Taller2-TBD" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../tbd2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../tbdFinal/Taller2-Back" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../tdbFinal/Taller1-TBD" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../twitter" value="PREVIEW" />
       </map>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Taller2-TBD/src/main/java/Taller1db/TBD/indice.java" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="68" />
-    <option name="y" value="25" />
-    <option name="width" value="1279" />
-    <option name="height" value="696" />
+    <option name="x" value="221" />
+    <option name="y" value="43" />
+    <option name="width" value="681" />
+    <option name="height" value="736" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Sprint1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprint1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="spring1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="Sprint1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprint1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="spring1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="Taller2-TBD" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sprint1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprint1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="spring1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Taller2-TBD" type="462c0819:PsiDirectoryNode" />
+              <item name="gradle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="Taller2-TBD" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sprint1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprint1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="spring1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="Taller2-TBD" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sprint1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprint1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="spring1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="Taller2-TBD" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sprint1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprint1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="spring1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="Taller2-TBD" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -390,8 +342,8 @@
               <item name="Taller1db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Sprint1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprint1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="spring1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="Taller2-TBD" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -399,18 +351,22 @@
               <item name="Taller1db" type="462c0819:PsiDirectoryNode" />
               <item name="TBD" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spring1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring1" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Taller2-TBD" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -472,20 +428,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1d5c7438-b606-4ed1-b980-6169d02c130c" name="Default" comment="" />
-      <created>1526007061076</created>
+      <changelist id="2ad9124b-84e0-44f2-91c6-428bca08ef71" name="Default" comment="" />
+      <created>1526086969152</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1526007061076</updated>
-      <workItem from="1526007063165" duration="368000" />
+      <updated>1526086969152</updated>
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368000" />
-  </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -494,15 +447,13 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959569" />
-      <window_info anchor="bottom" id="Build" visible="true" weight="0.32991803" />
-      <window_info anchor="right" id="Database" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Build" visible="true" weight="0.32917318" />
       <window_info anchor="right" id="Gradle" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -512,17 +463,32 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Taller2-TBD/src/main/java/Taller1db/TBD/Entities/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Taller2-TBD/src/main/java/Taller1db/TBD/Entities/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Taller2-TBD/src/main/java/Taller1db/TBD/indice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="60" column="57" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
