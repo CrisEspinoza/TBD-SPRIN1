@@ -1,4 +1,4 @@
-package Taller1db.TBD;
+package Taller1db.TBD.Analyzer;
 
 import java.util.ArrayList;
 

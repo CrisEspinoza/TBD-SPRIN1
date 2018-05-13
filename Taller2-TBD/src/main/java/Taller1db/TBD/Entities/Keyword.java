@@ -47,4 +47,5 @@ public class Keyword implements Serializable {
     public void setName_keyword(Set<String> name_keyword) {
         this.name_keyword = name_keyword;
     }
+
 }
