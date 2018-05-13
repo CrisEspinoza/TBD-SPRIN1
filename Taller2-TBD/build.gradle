@@ -7,6 +7,8 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+
+
 	}
 }
 
@@ -37,4 +39,11 @@ dependencies {
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')
+	compile group: 'org.apache.lucene', name: 'lucene-core', version: '7.3.0'
+	compile group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '7.3.0'
+	compile group: 'org.apache.lucene', name: 'lucene-queryparser', version: '7.3.0'
+	compile group: 'org.apache.lucene', name: 'lucene-queries', version: '7.3.0'
+	testCompile group: 'org.apache.lucene', name: 'lucene-codecs', version: '7.3.0'
+	compile 'org.mongodb:mongo-java-driver:3.8.0-beta2'
+	compile 'org.mongodb:mongodb-driver-core:3.8.0-beta2'
 }
