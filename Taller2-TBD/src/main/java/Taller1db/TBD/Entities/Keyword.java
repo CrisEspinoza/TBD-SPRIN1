@@ -15,7 +15,7 @@ public class Keyword implements Serializable {
     private Long id;
 
     @Column(nullable = false)
-    private Set<String> name_keyword;
+    private String name_keyword;
 
     @ManyToOne
     @JoinColumn(name="club_id_keyword")
@@ -24,13 +24,6 @@ public class Keyword implements Serializable {
     public Keyword() {
     }
 
-    public Club getClub() {
-        return club;
-    }
-
-    public void setClub(Club club) {
-        this.club = club;
-    }
 
     public void setId(Long id) {
         this.id = id;
@@ -40,12 +33,19 @@ public class Keyword implements Serializable {
         return id;
     }
 
-    public Set<String> getName_keyword() {
+    public String getName_keyword() {
         return name_keyword;
     }
 
-    public void setName_keyword(Set<String> name_keyword) {
+    public Club getClub() {
+        return club;
+    }
+
+    public void setName_keyword(String name_keyword) {
         this.name_keyword = name_keyword;
     }
 
+    public void setClub(Club club) {
+    }
+        this.club = club;
 }
