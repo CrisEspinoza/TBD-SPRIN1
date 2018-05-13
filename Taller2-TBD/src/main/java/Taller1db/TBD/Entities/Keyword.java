@@ -46,6 +46,7 @@ public class Keyword implements Serializable {
     }
 
     public void setClub(Club club) {
-    }
         this.club = club;
+    }
+
 }

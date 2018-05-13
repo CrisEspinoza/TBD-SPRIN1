@@ -11,9 +11,16 @@ public class TbdApplication {
 
 	public static void main(String[] args) {
 
-		//Analizador analizador = new Analizador();
-		//ArrayList<Integer> resultado = analizador.analisisCompleto();
-		//System.out.println("El resultado es :"+resultado.toString());
+		Analizador analizador = new Analizador();
+		ArrayList<Integer> resultado = analizador.analisisCompleto();
+		System.out.println("#################################################################");
+        System.out.println("#################################################################");
+        System.out.println("#################################################################");
+        System.out.println("#################################################################");
+		System.out.println("El resultado es :"+resultado.toString());
+        System.out.println("#################################################################");
+        System.out.println("#################################################################");
+        System.out.println("#################################################################");
 		SpringApplication.run(TbdApplication.class, args);
 	}
 }

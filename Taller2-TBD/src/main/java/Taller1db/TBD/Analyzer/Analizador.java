@@ -7,15 +7,15 @@ import java.util.ArrayList;
 public class Analizador {
 
     int modalidad;
-    ArrayList<String> buenas;
-    ArrayList<String> malas;
+    ArrayList<String> buenas = new ArrayList<String>();;
+    ArrayList<String> malas = new ArrayList<String>();;
 
 
     public Analizador() {
-        this.buenas.add("bueno");
-        this.buenas.add("grande");
-        this.malas.add("malo");
-        this.malas.add("pesimo");
+
+        this.buenas.add("gracias");
+        this.malas.add("fome");
+
     }
 
     public ArrayList<Integer> analisisCompleto(){
@@ -27,7 +27,7 @@ public class Analizador {
         String resultado ;
 
         //conexion mongo
-        MongoClient mongoClient = new MongoClient();
+        MongoClient mongoClient = new MongoClient("localhost",27017);
         DB db = mongoClient.getDB("twitter7");
         DBCollection collection = db.getCollection("futbol");
         DBCursor cursor = collection.find();
