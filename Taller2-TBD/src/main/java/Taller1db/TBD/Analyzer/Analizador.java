@@ -34,8 +34,6 @@ public class Analizador {
 
         this.buenas=leerArchivo("Palabras/PalabrasBuenas.txt");
         this.malas=leerArchivo("Palabras/PalabrasMalas.txt");
-
-
     }
 
     public ArrayList<Integer> analisisCompleto(){
