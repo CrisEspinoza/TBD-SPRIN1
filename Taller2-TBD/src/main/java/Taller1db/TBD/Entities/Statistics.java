@@ -35,8 +35,8 @@ public class Statistics implements Serializable {
     @Column(nullable = false)
     private Club name;
 
-    @Column(nullable = false)
-    private String classification;
+   // @Column(nullable = false)
+    //private String classification;
 
     @Column(name = "last_update", nullable = false)
     private Timestamp lastUpdate;
@@ -72,9 +72,7 @@ public class Statistics implements Serializable {
         this.neutro_value = neutro_value;
     }
 
-    public void setClassification(String classification) {
-        this.classification = classification;
-    }
+    //public void setClassification(String classification) {this.classification = classification;}
 
     public void setLastUpdate(Timestamp lastUpdate) {
         this.lastUpdate = lastUpdate;
@@ -124,9 +122,7 @@ public class Statistics implements Serializable {
         return neutro_value;
     }
 
-    public String getClassification() {
-        return classification;
-    }
+   //public String getClassification() {return classification;}
 
     public Timestamp getLastUpdate() {
         return lastUpdate;

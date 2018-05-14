@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/TbdApplication.java" line="13" mnemonic="7" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/TbdApplication.java" line="14" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79b40508-097c-47e3-8d4b-e5b45da21da4" name="Default" comment="" />
@@ -25,8 +25,8 @@
       <file leaf-file-name="TbdApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/TbdApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="96" selection-start-line="22" selection-start-column="96" selection-end-line="22" selection-end-column="96" />
+            <state relative-caret-position="210">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Analizador.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Analizador.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/Analizador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-870">
-              <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
+            <state relative-caret-position="-1137">
+              <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Respository/ClubRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnalisisSentimineto.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AnalisisSentimineto.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/AnalisisSentimineto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="195">
               <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
             </state>
           </provider>
@@ -133,8 +133,8 @@
       <file leaf-file-name="Statistics.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Entities/Statistics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-75">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state>
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#1150#1159#0" expanded="true" />
               </folding>
@@ -531,14 +531,15 @@
         <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Entities/Club.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Entities/Keyword.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/TbdApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/DAO/IClubDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/Respository/clubRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/Indice.java" />
         <option value="$PROJECT_DIR$/src/main/java/Respository/StatisticsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/AnalisisSentimineto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/TbdApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Entities/Statistics.java" />
         <option value="$PROJECT_DIR$/src/main/java/Respository/ClubRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/Analizador.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/AnalisisSentimineto.java" />
       </list>
     </option>
   </component>
@@ -596,6 +597,15 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="TBD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller2-TBD" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="TBD" type="462c0819:PsiDirectoryNode" />
+              <item name="Analyzer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
@@ -1034,33 +1044,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/TbdApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Entities/Statistics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state>
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="e#1150#1159#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/TbdApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Respository/ClubRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="96" selection-start-line="22" selection-start-column="96" selection-end-line="22" selection-end-column="96" />
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/Analizador.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/AnalisisSentimineto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-870">
-          <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1074,20 +1091,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Respository/ClubRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/Analizador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="-1137">
+          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/AnalisisSentimineto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
         </state>
       </provider>
     </entry>

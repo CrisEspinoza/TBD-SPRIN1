@@ -44,7 +44,7 @@ public class Analizador {
         acumulador.add(0);
         acumulador.add(0);
         String resultado ;
-
+        Club equipo = clubRepository.findClubById(Long.valueOf(1));
         //conexion mongo
         MongoClient mongoClient = new MongoClient("localhost",27017);
         DB db = mongoClient.getDB("twitter7");
@@ -82,7 +82,8 @@ public class Analizador {
         statistics.setPositive_value(acumulador.get(0));
         statistics.setNegative_value(acumulador.get(1));
         statistics.setNeutro_value(acumulador.get(2));
-        //statistics.setName(equipo); falta definir como se representara la estadistica general
+        statistics.setName(equipo);
+        statistics.setName_statics("estadistica de generales");
         statistics.setLastUpdate(new Timestamp(time));
         return acumulador;
     }
@@ -134,7 +135,7 @@ public class Analizador {
             statistics.setName(equipo);
             statistics.setLastUpdate(new Timestamp(time));
             //clasificacion ?
-           // statistics.setName_statics();
+            statistics.setName_statics("estadistica de equipos");
             statisticsRepository.save(statistics);
 
             System.out.println("*********************************************");
