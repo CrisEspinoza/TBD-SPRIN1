@@ -23,7 +23,7 @@ public class Analizador {
     private ArrayList<String> malas = new ArrayList<String>();
 
     @Autowired
-    private ClubRepository clubRepository;
+    private ClubRepository clubRepository ;
 
     @Autowired
     private StatisticsRepository statisticsRepository;

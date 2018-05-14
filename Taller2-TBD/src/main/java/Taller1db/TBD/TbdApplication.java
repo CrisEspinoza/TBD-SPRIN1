@@ -1,6 +1,8 @@
 package Taller1db.TBD;
 
 import Taller1db.TBD.Analyzer.Analizador;
+import Taller1db.TBD.Respository.ClubRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -21,7 +23,7 @@ public class TbdApplication {
         System.out.println("#################################################################");
         System.out.println("#################################################################");
         System.out.println("#################################################################");
-        //analizador.AnalisisEspecifico();
+//        //analizador.AnalisisEspecifico();
 		SpringApplication.run(TbdApplication.class, args);
 
 	}

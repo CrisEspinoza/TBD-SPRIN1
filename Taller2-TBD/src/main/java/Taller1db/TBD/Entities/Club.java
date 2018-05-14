@@ -95,4 +95,5 @@ public class Club implements Serializable {
     public Timestamp getLastUpdate() {
         return lastUpdate;
     }
+    private static final long serialVersionUID = 1L;
 }
