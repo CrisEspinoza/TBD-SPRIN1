@@ -55,13 +55,10 @@ public class TwitterListener {
                             .append("name",status.getUser().getName())
                             .append("followers",status.getUser().getFollowersCount());
                    collection.insert(tweet);
-<<<<<<< Updated upstream
+
                     //System. out. println(ubicacion);
                 }
-=======
-                    System. out. println(ubicacion);
-                //}
->>>>>>> Stashed changes
+
 	        }
 
 			@Override

@@ -1,7 +1,7 @@
 package Taller1db.TBD.Analyzer;
 
-import Respository.ClubRepository;
-import Respository.StatisticsRepository;
+import Taller1db.TBD.Respository.ClubRepository;
+import Taller1db.TBD.Respository.StatisticsRepository;
 import Taller1db.TBD.Entities.Club;
 import Taller1db.TBD.Entities.Keyword;
 import Taller1db.TBD.Entities.Statistics;
@@ -9,7 +9,6 @@ import com.mongodb.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Timestamp;
@@ -18,9 +17,10 @@ import java.util.Date;
 
 public class Analizador {
 
-    int modalidad;
-    String [] buenas;
-    String [] malas;
+
+    private int modalidad;
+    private  ArrayList<String> buenas= new  ArrayList<String>();
+    private ArrayList<String> malas = new ArrayList<String>();
 
     @Autowired
     private ClubRepository clubRepository;
@@ -32,8 +32,8 @@ public class Analizador {
 
     public Analizador() throws IOException {
 
-        this.buenas=leerArchivo("Palabras/PalabrasBuenas.txt");
-        this.malas=leerArchivo("Palabras/PalabrasMalas.txt");
+        this.buenas=leerArchivo("/home/sebastian/Documentos/tdb/spring1/Taller2-TBD/src/main/java/Taller1db/TBD/Analyzer/PalabrasBuenas.txt");
+        this.malas=leerArchivo("/home/sebastian/Documentos/tdb/spring1/Taller2-TBD/src/main/java/Taller1db/TBD/Analyzer/PalabrasMalas.txt");
 
 
     }
@@ -45,7 +45,8 @@ public class Analizador {
         acumulador.add(0);
         acumulador.add(0);
         String resultado ;
-        Club equipo = clubRepository.findClubById(Long.valueOf(1));
+
+        Club equipo = clubRepository.findById(Long.valueOf(17)).orElse(null);
         //conexion mongo
         MongoClient mongoClient = new MongoClient("localhost",27017);
         DB db = mongoClient.getDB("twitter7");
@@ -72,8 +73,6 @@ public class Analizador {
         }
 
 
-
-
         // se crea una fecha tipo timestamp para el registro historico
         Date date = new Date();
         long time = date.getTime();
@@ -83,9 +82,11 @@ public class Analizador {
         statistics.setPositive_value(acumulador.get(0));
         statistics.setNegative_value(acumulador.get(1));
         statistics.setNeutro_value(acumulador.get(2));
-        statistics.setName(equipo);
+        //statistics.setName(equipo);
         statistics.setName_statics("estadistica de generales");
         statistics.setLastUpdate(new Timestamp(time));
+        statisticsRepository.save(statistics);
+
         return acumulador;
     }
 
@@ -126,18 +127,18 @@ public class Analizador {
                 }
             }
 
-            Date date = new Date();
-            long time = date.getTime();
-
-            Statistics statistics = new Statistics();
-            statistics.setPositive_value(acumulador.get(0));
-            statistics.setNegative_value(acumulador.get(1));
-            statistics.setNeutro_value(acumulador.get(2));
-            statistics.setName(equipo);
-            statistics.setLastUpdate(new Timestamp(time));
-            //clasificacion ?
-            statistics.setName_statics("estadistica de equipos");
-            statisticsRepository.save(statistics);
+//            Date date = new Date();
+//            long time = date.getTime();
+//
+//            Statistics statistics = new Statistics();
+//            statistics.setPositive_value(acumulador.get(0));
+//            statistics.setNegative_value(acumulador.get(1));
+//            statistics.setNeutro_value(acumulador.get(2));
+//            statistics.setName(equipo);
+//            statistics.setLastUpdate(new Timestamp(time));
+//            //clasificacion ?
+//            statistics.setName_statics("estadistica de equipos");
+//            statisticsRepository.save(statistics);
 
             System.out.println("*********************************************");
             System.out.println("*********************************************");
@@ -153,19 +154,26 @@ public class Analizador {
     }
 
 
-    public String [] leerArchivo(String name) throws IOException {
+    public  ArrayList<String> leerArchivo(String name) throws IOException {
 
         BufferedReader br = new BufferedReader(new FileReader(name));
         String linea,acumulador;
         acumulador="";
-        String[] palabras ;
+        ArrayList<String> palabras= new  ArrayList<String>() ;
 
         while((linea=br.readLine())!=null){
-            acumulador +=linea;
+            palabras.add(linea);
 
         }
 
-        palabras= acumulador.split("\n");
+//        palabras= acumulador.split("\n");
+//        System.out.println("*********************************************");
+//        System.out.println("*********************************************");
+//
+        System.out.println(palabras.toString());
+//
+//
+//        System.out.println("*********************************************");
         return palabras;
 
     }

@@ -3,12 +3,12 @@ package Taller1db.TBD.Analyzer;
 import java.util.ArrayList;
 
 public class AnalisisSentimineto {
-    int  palabrasBuenas;
-    int  palabrasMalas;
-    String[] buenas;
-    String[] malas;
+    private int  palabrasBuenas;
+    private int  palabrasMalas;
+   private ArrayList<String> buenas ;
+    private ArrayList<String> malas;
 
-    public AnalisisSentimineto(String[] buenas,String[] malas) {
+    public AnalisisSentimineto( ArrayList<String> buenas, ArrayList<String> malas) {
         this.palabrasBuenas = 0;
         this.palabrasMalas=0;
         this.buenas=buenas;
@@ -19,26 +19,27 @@ public class AnalisisSentimineto {
 
         String tweetMin = tweet.toLowerCase().replace(" es ","").replace(" ","");
 
-        for (int i = 0; i < buenas.length; i++) {
-            int tweetIndex= tweetMin.indexOf(buenas[i]);
-            if(tweetIndex >-1){
-                if(tweetMin.substring(tweetIndex-2,tweetIndex).equals("no")){
-                    palabrasMalas++;
-                }
-                else{
+        for (int i = 0; i < buenas.size(); i++) {
+            int tweetIndex = tweetMin.indexOf(buenas.get(i));
+            if (tweetIndex > -1) {
+                //if (tweetMin.substring(tweetIndex - 2, tweetIndex).equals("no")) {
+                 //   palabrasMalas++;
+                //} else {
                     palabrasBuenas++;
-                }
+               // }
 
             }
+        }
+         for (int i = 0; i < malas.size(); i++)  {
 
-                tweetIndex= tweetMin.indexOf(malas[i]);
+            int tweetIndex= tweetMin.indexOf(malas.get(i));
             if(tweetIndex >-1){
-                if(tweetMin.substring(tweetIndex-2,tweetIndex).equals("no")){
-                    palabrasBuenas++;
-                }
-                else{
+               // if(tweetMin.substring(tweetIndex-2,tweetIndex).equals("no")){
+                 //   palabrasBuenas++;
+                //}
+                //else{
                     palabrasMalas++;
-                }
+                //}
 
             }
 
