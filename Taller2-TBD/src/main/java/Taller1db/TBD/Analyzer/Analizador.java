@@ -28,18 +28,14 @@ public class Analizador {
     @Autowired
     private StatisticsRepository statisticsRepository;
 
-<<<<<<< Updated upstream
 
 
     public Analizador() throws IOException {
 
-        this.buenas=leerArchivo("buenas.txt");
-        this.malas=leerArchivo("malas.txt");
+        this.buenas=leerArchivo("Palabras/PalabrasBuenas.txt");
+        this.malas=leerArchivo("Palabras/PalabrasMalas.txt");
 
-=======
-        this.buenas.add("gracias");
-        this.malas.add("fome");
->>>>>>> Stashed changes
+
     }
 
     public ArrayList<Integer> analisisCompleto(){

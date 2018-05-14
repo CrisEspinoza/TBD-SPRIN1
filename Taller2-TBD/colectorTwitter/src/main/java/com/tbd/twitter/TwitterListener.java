@@ -39,13 +39,12 @@ public class TwitterListener {
 		twitterStream.addListener(new StatusListener() {
 			public void onStatus(Status status) {
 			    String ubicacion=status.getUser().getLocation();
-<<<<<<< Updated upstream
+
 
                 if (ubicacion.indexOf("Chile")>0) {
-=======
-				System. out. println(ubicacion);
-                //if (ubicacion.indexOf("Chile")>0) {
->>>>>>> Stashed changes
+
+
+
                 	BasicDBObject tweet;
                     tweet = new BasicDBObject("id",status.getId())
                             .append("text",status.getText())
