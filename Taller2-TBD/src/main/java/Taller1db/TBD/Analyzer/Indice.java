@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -50,7 +51,7 @@ public class Indice{
     DBCollection collection = db.getCollection("futbol");
     DBCursor cursor = collection.find();
 
-    public  void indexar() {
+    public void indexar() {
         try {
             Directory dir = FSDirectory.open(Paths.get("index/"));
             Analyzer analyzer = new StandardAnalyzer();
@@ -90,8 +91,11 @@ public class Indice{
     }
 
 
-      public void buscar(String equipo){
+      public  ArrayList<String>  buscar(String equipo){
+          ArrayList<String> tweets = new ArrayList<String>();
+
             try {
+
 
                 IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get("index/")));
                 IndexSearcher searcher = new IndexSearcher(reader);
@@ -105,10 +109,13 @@ public class Indice{
                 System.out.println(hits.length);
                 for(int i = 0; i < hits.length; i++) {
                     Document doc = searcher.doc(hits[i].doc);
-                    String id_salida = doc.get("id");
-                    System.out.println(id_salida);
+                    //String id_salida = doc.get("id");
+                    //System.out.println(id_salida);
+                    String text_salida = doc.get("text");
+                    tweets.add(text_salida);
                 }
                 reader.close();
+
             }
             catch(IOException ioe) {
 
@@ -116,7 +123,7 @@ public class Indice{
                 e.printStackTrace();
             }
 
-
+          return tweets;
       }
     }
 

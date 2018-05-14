@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class AnalisisSentimineto {
     int  palabrasBuenas;
     int  palabrasMalas;
-    ArrayList<String> buenas;
-    ArrayList<String> malas;
+    String[] buenas;
+    String[] malas;
 
-    public AnalisisSentimineto(ArrayList<String> buenas,ArrayList<String> malas) {
+    public AnalisisSentimineto(String[] buenas,String[] malas) {
         this.palabrasBuenas = 0;
         this.palabrasMalas=0;
         this.buenas=buenas;
@@ -19,8 +19,8 @@ public class AnalisisSentimineto {
 
         String tweetMin = tweet.toLowerCase().replace(" es ","").replace(" ","");
 
-        for (int i = 0; i < buenas.size(); i++) {
-            int tweetIndex= tweetMin.indexOf(buenas.get(i));
+        for (int i = 0; i < buenas.length; i++) {
+            int tweetIndex= tweetMin.indexOf(buenas[i]);
             if(tweetIndex >-1){
                 if(tweetMin.substring(tweetIndex-2,tweetIndex).equals("no")){
                     palabrasMalas++;
@@ -31,7 +31,7 @@ public class AnalisisSentimineto {
 
             }
 
-                tweetIndex= tweetMin.indexOf(malas.get(i));
+                tweetIndex= tweetMin.indexOf(malas[i]);
             if(tweetIndex >-1){
                 if(tweetMin.substring(tweetIndex-2,tweetIndex).equals("no")){
                     palabrasBuenas++;

@@ -31,7 +31,7 @@ public class TwitterListener {
 	@Autowired
 	private MongoTemplate mongo;
 
-	MongoClient mongoo = new MongoClient("46.101.254.135",27017);
+	MongoClient mongoo = new MongoClient();
 	DB database = mongoo.getDB("twitter7");
 	DBCollection collection = database.getCollection("futbol");
 	@PostConstruct
@@ -39,19 +39,19 @@ public class TwitterListener {
 		twitterStream.addListener(new StatusListener() {
 			public void onStatus(Status status) {
 			    String ubicacion=status.getUser().getLocation();
-				System. out. println(ubicacion);
+
                 if (ubicacion.indexOf("Chile")>0) {
                 	BasicDBObject tweet;
                     tweet = new BasicDBObject("id",status.getId())
                             .append("text",status.getText())
-                            .append("like",status. 	getFavoriteCount())
+                            .append("like",status.getFavoriteCount())
                             .append("geoLocation",status.getGeoLocation())
                             .append("retweet",status.getRetweetCount())
                             .append("locationUser",status.getUser().getLocation())
                             .append("name",status.getUser().getName())
                             .append("followers",status.getUser().getFollowersCount());
                    collection.insert(tweet);
-                    System. out. println(ubicacion);
+                    //System. out. println(ubicacion);
                 }
 	        }
 
@@ -82,7 +82,40 @@ public class TwitterListener {
 		});
 		
 	    FilterQuery filter=new FilterQuery();
-	    filter.track(new String[]{"VamosColoColo","LosCruzados","Catolica","ColoColo","colo colo","colo","Huachipato","UC","Audax"});
+	    filter.track(new String[]{"Católica","La UC", "cruzados", "la franja", "Azul y Blanco","Caballeros Cruzados", "la Cato",
+				 "El campanil", "u de conce"," la u penquista", "auricielos"," los del foro","Foreros",
+				"La U", "la Chile", "el bulla"," el león", "chuncho", "azul", "leon", "bullanguero"," romántico viajero", "azules",
+
+				"Colo Colo",
+				"Cacique", "Indio", "colocolino", "albo", "garrero", "el popular", "eterno campeón","la ruca","cacike",
+
+				"Unión la Calera",
+				"Cementeros", "maquina cementera", "la calera",
+
+				"Antofagasta",
+				"Pumas", "albiceleste",
+				"Unión española",
+				"Hispanos", "furia roja", "rojos de Santa Laura",
+				"O’higgins",
+				"Minero", "celeste", "capo de provincia", "rancagüinos",
+				"Huachipato",
+				"Acerero", "siderúrgicos",
+				"Iquique",
+				"Dragón", "celeste",
+				"Palestino",
+				"Árabe"," paisano", "tricolore", "tino-tino",
+				"Curicó unido",
+				"Tortero", "albirrojo"," curi", "Cuadro Tortero",
+				"San luis",
+				"Canario", "amarillo",
+				"Audax italiano",
+				"Audino", "verde", "tano", "itálico",
+				"Everton",
+				"Evertoniano", "ruletero", "auriazul",
+				"Temuco",
+				"Albiverde", "león de ñielol", "el pije"," el histórico", "temucanos", "la cruz de malta"}
+
+		);
 	    filter.language(new String[]{"es"});
 	    twitterStream.filter(filter);
 	}
