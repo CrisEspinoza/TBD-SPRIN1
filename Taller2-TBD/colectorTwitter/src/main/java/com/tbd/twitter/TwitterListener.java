@@ -31,7 +31,7 @@ public class TwitterListener {
 	@Autowired
 	private MongoTemplate mongo;
 
-	MongoClient mongoo = new MongoClient();
+	MongoClient mongoo = new MongoClient("46.101.254.135",27017);
 	DB database = mongoo.getDB("twitter7");
 	DBCollection collection = database.getCollection("LaDivinaComida");
 	@PostConstruct
@@ -39,12 +39,9 @@ public class TwitterListener {
 		twitterStream.addListener(new StatusListener() {
 			public void onStatus(Status status) {
 			    String ubicacion=status.getUser().getLocation();
-
-
                 if (ubicacion.indexOf("Chile")>0) {
-
-
-
+				System. out. println(ubicacion);
+                //if (ubicacion.indexOf("Chile")>0) {
                 	BasicDBObject tweet;
                     tweet = new BasicDBObject("id",status.getId())
                             .append("text",status.getText())
