@@ -16,12 +16,6 @@ public class Region implements Serializable {
     @Column(nullable = false)
     private String firstName;
 
-    @Column(nullable = false)
-    private Long latitude;
-
-    @Column(nullable = false)
-    private Long length;
-
     @OneToMany(mappedBy="region")
     private Set<Commune> Commune;
 
@@ -44,14 +38,6 @@ public class Region implements Serializable {
         this.firstName = firstName;
     }
 
-    public void setLatitude(Long latitude) {
-        this.latitude = latitude;
-    }
-
-    public void setLength(Long length) {
-        this.length = length;
-    }
-
     public Long getId() {
         return id;
     }
@@ -60,11 +46,4 @@ public class Region implements Serializable {
         return firstName;
     }
 
-    public Long getLatitude() {
-        return latitude;
-    }
-
-    public Long getLength() {
-        return length;
-    }
 }

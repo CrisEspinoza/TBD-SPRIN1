@@ -22,12 +22,6 @@ public class Commune implements Serializable {
     @Column(nullable = false)
     private String firstName;
 
-    @Column(nullable = false)
-    private Long latitude;
-
-    @Column(nullable = false)
-    private Long length;
-
     @ManyToOne
     @JoinColumn(name="region_id")
     private Region region;
@@ -66,28 +60,12 @@ public class Commune implements Serializable {
         this.firstName = firstName;
     }
 
-    public void setLatitude(Long latitude) {
-        this.latitude = latitude;
-    }
-
-    public void setLength(Long length) {
-        this.length = length;
-    }
-
     public Long getId() {
         return id;
     }
 
     public String getFirstName() {
         return firstName;
-    }
-
-    public Long getLatitude() {
-        return latitude;
-    }
-
-    public Long getLength() {
-        return length;
     }
 
 }
