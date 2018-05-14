@@ -23,6 +23,7 @@ public class Commune implements Serializable {
     private String firstName;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name="region_id")
     private Region region;
 

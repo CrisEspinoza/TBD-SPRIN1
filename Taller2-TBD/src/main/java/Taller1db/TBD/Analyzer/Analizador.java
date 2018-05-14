@@ -32,8 +32,8 @@ public class Analizador {
 
     public Analizador() throws IOException {
 
-        this.buenas=leerArchivo("/home/sebastian/Documentos/tdb/spring1/Taller2-TBD/src/main/java/Taller1db/TBD/Analyzer/PalabrasBuenas.txt");
-        this.malas=leerArchivo("/home/sebastian/Documentos/tdb/spring1/Taller2-TBD/src/main/java/Taller1db/TBD/Analyzer/PalabrasMalas.txt");
+        this.buenas=leerArchivo("/home/huaso/Escritorio/TBD/TBD-SPRIN1/Taller2-TBD/src/main/java/Taller1db/TBD/Analyzer/PalabrasBuenas.txt");
+        this.malas=leerArchivo("/home/huaso/Escritorio/TBD/TBD-SPRIN1/Taller2-TBD/src/main/java/Taller1db/TBD/Analyzer/PalabrasMalas.txt");
 
 
     }
@@ -46,19 +46,22 @@ public class Analizador {
         acumulador.add(0);
         String resultado ;
 
-        Club equipo = clubRepository.findById(Long.valueOf(17)).orElse(null);
+        Integer clubId  = 17;
+        Club equipo = clubRepository.findClubById(clubId.longValue());
+
         //conexion mongo
         MongoClient mongoClient = new MongoClient("localhost",27017);
         DB db = mongoClient.getDB("twitter7");
         DBCollection collection = db.getCollection("futbol");
         DBCursor cursor = collection.find();
 
+
         while (cursor.hasNext()) {
             DBObject tweet = cursor.next();
 
             AnalisisSentimineto analisis = new AnalisisSentimineto(this.buenas,this.malas);
-            resultado= analisis.analizar(tweet.get("text").toString());
 
+            resultado = analisis.analizar(tweet.get("text").toString());
             if (resultado.equals("positivo")){
                 acumulador.set(0,acumulador.get(0)+1);
             }
@@ -83,9 +86,11 @@ public class Analizador {
         statistics.setNegative_value(acumulador.get(1));
         statistics.setNeutro_value(acumulador.get(2));
         //statistics.setName(equipo);
+        new Timestamp(time);
+        statistics.setLastUpdate(new Timestamp(time));
         statistics.setName_statics("estadistica de generales");
         statistics.setLastUpdate(new Timestamp(time));
-        statisticsRepository.save(statistics);
+        //statisticsRepository.save(statistics);
 
         return acumulador;
     }

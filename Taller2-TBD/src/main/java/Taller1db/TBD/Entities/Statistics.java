@@ -42,6 +42,7 @@ public class Statistics implements Serializable {
     private Timestamp lastUpdate;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name="club_id_statics")
     private Club club;
 

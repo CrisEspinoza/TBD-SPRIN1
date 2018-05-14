@@ -1,5 +1,7 @@
 package Taller1db.TBD.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
@@ -17,6 +19,7 @@ public class Region implements Serializable {
     private String firstName;
 
     @OneToMany(mappedBy="region")
+    @JsonIgnore
     private Set<Commune> Commune;
 
     public Region() {

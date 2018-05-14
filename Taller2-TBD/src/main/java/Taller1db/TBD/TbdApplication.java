@@ -11,7 +11,6 @@ import java.util.ArrayList;
 public class TbdApplication {
 
 	public static void main(String[] args) throws IOException {
-
 		Analizador analizador = new Analizador();
 		ArrayList<Integer> resultado = analizador.analisisCompleto();
 		System.out.println("#################################################################");
@@ -24,5 +23,6 @@ public class TbdApplication {
         System.out.println("#################################################################");
         //analizador.AnalisisEspecifico();
 		SpringApplication.run(TbdApplication.class, args);
+
 	}
 }

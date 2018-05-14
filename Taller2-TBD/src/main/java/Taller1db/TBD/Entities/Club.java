@@ -30,9 +30,11 @@ public class Club implements Serializable {
     private Timestamp lastUpdate;
 
     @OneToMany(mappedBy="club")
+    @JsonIgnore
     private Set<Statistics> statistics;
 
     @OneToMany(mappedBy="club")
+    @JsonIgnore
     private Set<Keyword> keywords;
 
     public Club() {
