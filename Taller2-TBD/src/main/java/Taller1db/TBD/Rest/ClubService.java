@@ -1,7 +1,9 @@
 package Taller1db.TBD.Rest;
 
 import Taller1db.TBD.Entities.Club;
+import Taller1db.TBD.Entities.Statistics;
 import Taller1db.TBD.Respository.ClubRepository;
+import Taller1db.TBD.Respository.StatisticsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +16,9 @@ public class ClubService {
 
     @Autowired
     private ClubRepository clubRepository;
+
+    @Autowired
+    private StatisticsRepository statisticsRepository;
 
     // retorna todos los club de la base de datos club, se llama con la ruta /club
     @RequestMapping(method = RequestMethod.GET)
@@ -28,5 +33,17 @@ public class ClubService {
     public Club getClub(@PathVariable Integer id) {
         Long clubId = id.longValue();
         return clubRepository.findClubById(clubId);
+    }
+
+    /*
+     */
+    @RequestMapping(value = "/grafic1", method = RequestMethod.GET)
+    @ResponseBody
+    public Statistics getStatisGeneral() {
+
+        List<Statistics> listStatis = statisticsRepository.findByOrOrderByLastUpdateDes();
+        Statistics statistics = listStatis.get(0);
+
+        return statistics;
     }
 }

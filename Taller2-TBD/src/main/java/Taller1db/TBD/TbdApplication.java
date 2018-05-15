@@ -1,6 +1,5 @@
 package Taller1db.TBD;
 
-import Taller1db.TBD.Analyzer.Analizador;
 import Taller1db.TBD.Respository.ClubRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -21,24 +20,7 @@ import java.util.ArrayList;
 @EnableAutoConfiguration
 @EnableScheduling
 public class TbdApplication {
-	@Autowired
-	ClubRepository clubRepository;
-
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(TbdApplication.class, args);
-//
-//		Analizador analizador = new Analizador();
-//		ArrayList<Integer> resultado = analizador.analisisCompleto();
-//		System.out.println("#################################################################");
-//        System.out.println("#################################################################");
-//        System.out.println("#################################################################");
-//        System.out.println("#################################################################");
-//		System.out.println("El resultado es :"+resultado.toString());
-//        System.out.println("#################################################################");
-//        System.out.println("#################################################################");
-//        System.out.println("#################################################################");
-//////        //analizador.AnalisisEspecifico();
-
-
 	}
 }
