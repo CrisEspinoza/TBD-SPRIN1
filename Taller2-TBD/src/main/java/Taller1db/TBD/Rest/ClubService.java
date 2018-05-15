@@ -24,6 +24,7 @@ public class ClubService {
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
     public List<Club> getAllClub() {
+
         return clubRepository.findAll();
     }
 
@@ -37,13 +38,5 @@ public class ClubService {
 
     /*
      */
-    @RequestMapping(value = "/grafic1", method = RequestMethod.GET)
-    @ResponseBody
-    public Statistics getStatisGeneral() {
 
-        List<Statistics> listStatis = statisticsRepository.findByOrOrderByLastUpdateDes();
-        Statistics statistics = listStatis.get(0);
-
-        return statistics;
-    }
 }

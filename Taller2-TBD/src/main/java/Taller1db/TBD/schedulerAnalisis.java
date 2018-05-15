@@ -38,7 +38,7 @@ public class schedulerAnalisis {
     @Scheduled(fixedRate = 10000)
     public void analizador() throws IOException {
 
-//        this.analisisGeneral();
+     this.analisisGeneral();
 
         this.analisisEspecifico();
 
@@ -88,9 +88,9 @@ public class schedulerAnalisis {
         // se crea una fecha tipo timestamp para el registro historico
         Date date = new Date();
         long time = date.getTime();
+        System.out.println(date);
 
-
-
+        System.out.println(time);
         System.out.println("#################################################################");
         System.out.println("#################################################################");
         System.out.println("#################################################################");
@@ -148,7 +148,6 @@ public class schedulerAnalisis {
 
                 for (String tweet: tweets) {
                     HashMap<String,Double> resultado = classifier.classify(tweet);
-
                     if (resultado.get("positive")> resultado.get("negative")){
                         acumulador[0]+=1;
                     }

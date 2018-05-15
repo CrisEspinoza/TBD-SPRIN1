@@ -30,7 +30,6 @@ public class Club implements Serializable {
     private Timestamp lastUpdate;
 
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    @JsonIgnore
     @JoinColumn(name ="club_id")
     private Set<Statistics> statistics;
 
