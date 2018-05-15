@@ -78,10 +78,9 @@ public class Indice{
                 if (writer.getConfig().getOpenMode() == OpenMode.CREATE) {
                     System.out.println("Indexando el archivo: " + elemento.get("_id") + "con texto" + elemento.get("text"));
                     writer.addDocument(doc);
+                } else {
+                    writer.updateDocument(new Term("text" + elemento.get("text")), doc);
                 }
-//                else {
-//                    //writer.updateDocument(new Term("text" + elemento.get("text")), doc);
-//                }
 
 
             }
@@ -105,7 +104,7 @@ public class Indice{
                 QueryParser parser = new QueryParser("text", analyzer);
                 Query query = parser.parse(equipo);
 
-                TopDocs results = searcher.search(query, 2500);
+                TopDocs results = searcher.search(query, 9999);
                 ScoreDoc[] hits = results.scoreDocs;
                 System.out.println(hits.length);
                 for(int i = 0; i < hits.length; i++) {
