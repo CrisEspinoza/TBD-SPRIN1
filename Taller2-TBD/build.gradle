@@ -46,4 +46,5 @@ dependencies {
 	testCompile group: 'org.apache.lucene', name: 'lucene-codecs', version: '7.3.0'
 	compile 'org.mongodb:mongo-java-driver:3.8.0-beta2'
 	compile 'org.mongodb:mongodb-driver-core:3.8.0-beta2'
+	compile group: 'org.apache.opennlp', name: 'opennlp-tools', version: '1.8.4'
 }

@@ -1,5 +1,7 @@
 package Taller1db.TBD.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -18,6 +20,7 @@ public class Keyword implements Serializable {
     private String name_keyword;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name="club_id_keyword")
     private Club club;
 

@@ -29,13 +29,17 @@ public class Club implements Serializable {
     @Column(name = "last_update", nullable = false)
     private Timestamp lastUpdate;
 
-    @OneToMany(mappedBy="club")
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @JsonIgnore
+    @JoinColumn(name ="club_id")
     private Set<Statistics> statistics;
 
     @OneToMany(mappedBy="club")
+    @JsonIgnore
     private Set<Keyword> keywords;
 
     public Club() {
+
     }
 
     public Set<Statistics> getStatistics() {
@@ -93,4 +97,5 @@ public class Club implements Serializable {
     public Timestamp getLastUpdate() {
         return lastUpdate;
     }
+    private static final long serialVersionUID = 1L;
 }
