@@ -31,29 +31,30 @@ public class TwitterListener {
 	@Autowired
 	private MongoTemplate mongo;
 
-	MongoClient mongoo = new MongoClient("46.101.254.135",27017);
+	MongoClient mongoo = new MongoClient("localhost",27017);
 	DB database = mongoo.getDB("twitter7");
-	DBCollection collection = database.getCollection("LaDivinaComida");
+	DBCollection collection = database.getCollection("futbol");
 	@PostConstruct
 	public void run() {
 		twitterStream.addListener(new StatusListener() {
 			public void onStatus(Status status) {
 			    String ubicacion=status.getUser().getLocation();
                 if (ubicacion.indexOf("Chile")>0) {
-				System. out. println(ubicacion);
-                //if (ubicacion.indexOf("Chile")>0) {
-                	BasicDBObject tweet;
-                    tweet = new BasicDBObject("id",status.getId())
-                            .append("text",status.getText())
-                            .append("like",status.getFavoriteCount())
-                            .append("geoLocation",status.getGeoLocation())
-                            .append("retweet",status.getRetweetCount())
-                            .append("locationUser",status.getUser().getLocation())
-                            .append("name",status.getUser().getName())
-                            .append("followers",status.getUser().getFollowersCount());
-                   collection.insert(tweet);
+					//System. out. println(ubicacion);
 
-                    //System. out. println(ubicacion);
+					BasicDBObject tweet;
+					tweet = new BasicDBObject("id", status.getId())
+							.append("text", status.getText())
+							.append("like", status.getFavoriteCount())
+							.append("geoLocation", status.getGeoLocation())
+							.append("retweet", status.getRetweetCount())
+							.append("locationUser", status.getUser().getLocation())
+							.append("name", status.getUser().getName())
+							.append("followers", status.getUser().getFollowersCount());
+					collection.insert(tweet);
+
+					//System. out. println(ubicacion);
+
                 }
 
 	        }

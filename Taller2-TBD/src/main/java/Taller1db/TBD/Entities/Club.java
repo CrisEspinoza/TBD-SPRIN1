@@ -29,8 +29,9 @@ public class Club implements Serializable {
     @Column(name = "last_update", nullable = false)
     private Timestamp lastUpdate;
 
-    @OneToMany(mappedBy="club")
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JsonIgnore
+    @JoinColumn(name ="club_id")
     private Set<Statistics> statistics;
 
     @OneToMany(mappedBy="club")
@@ -38,6 +39,7 @@ public class Club implements Serializable {
     private Set<Keyword> keywords;
 
     public Club() {
+
     }
 
     public Set<Statistics> getStatistics() {

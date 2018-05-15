@@ -29,11 +29,10 @@ public class Statistics implements Serializable {
     private int negative_value;
 
     @Column(nullable = false)
-
     private int neutro_value;
 
-    @Column(nullable = false)
-    private Club name;
+//    @Column(nullable = false)
+//    private Club name;
 
    // @Column(nullable = false)
     //private String classification;
@@ -41,10 +40,10 @@ public class Statistics implements Serializable {
     @Column(name = "last_update", nullable = false)
     private Timestamp lastUpdate;
 
-    @ManyToOne
-    @JsonIgnore
-    @JoinColumn(name="club_id_statics")
-    private Club club;
+//    @ManyToOne
+//    @JsonIgnore
+//    @JoinColumn(name="club_id_statics")
+//    private Club club;
 
     @ManyToMany(mappedBy = "statistics")
     @JsonIgnore
@@ -79,25 +78,25 @@ public class Statistics implements Serializable {
         this.lastUpdate = lastUpdate;
     }
 
-    public Club getName() {
-        return name;
-    }
+//    public Club getName() {
+//        return name;
+//    }
 
     public Set<Commune> getCommunes() {
         return communes;
     }
 
-    public Club getClub() {
-        return club;
-    }
+//    public Club getClub() {
+//        return club;
+//    }
 
-    public void setName(Club name) {
-        this.name = name;
-    }
+//    public void setName(Club name) {
+//        this.name = name;
+//    }
 
-    public void setClub(Club club) {
-        this.club = club;
-    }
+//    public void setClub(Club club) {
+//        this.club = club;
+//    }
 
     public void setCommunes(Set<Commune> communes) {
         this.communes = communes;
