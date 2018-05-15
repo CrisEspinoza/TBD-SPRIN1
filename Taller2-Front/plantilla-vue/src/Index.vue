@@ -1,22 +1,30 @@
 <template>
-
-<div class="center">
-  <h2>{{title}}</h2>
-    <img class="logo-big" src="./img/usach.png" />
-    <p>
-    Universidad de Santiago de Chile
-    </p>
-</div>
+    <div>
+            <div class="container">
+                <div class="page-header">
+                    <h1>Bienvenidos al Sprint 1 del Grupo 7 - TDB <small>The beast team :3</small></h1>
+                </div>
+            </div>
+        <menu-component></menu-component>
+    </div>
 </template>
+
 <script>
+    import menuComponent from './menuComponent.vue';
 export default{
-  data(){
-    return{
-      title:'Grupo 7 - Taller 1'
+
+    name: '',
+    components: {
+        'menu-component': menuComponent
+    },
+    data(){
+        return{
+
+        }
     }
-  },
-  mounted:function(){
-    console.log('Index.vue')
-  }
 }
 </script>
+
+<style scoped>
+
+</style>

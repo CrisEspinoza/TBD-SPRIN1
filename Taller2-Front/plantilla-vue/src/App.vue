@@ -1,31 +1,25 @@
 <template>
-  <div>
-    <header>
-      <div class="branding">
-        <img class ="logo-small" src="./img/icono.png" />
-        <span></span>
+  <div id="app">
+      <div class="container">
+          <router-view></router-view>
       </div>
-      <nav>
-        <a href="#/">Home</a>
-        <a href="#/actors">Actores</a>
-        <a href="#/addActors">Agregar actor</a>
-        <a href="#/viewMovies">Peliculas</a>
-        <a href="#/addMovie">Agregar película</a>
-        <a href="#/FilmWithActor">Asociar pelicula con un actor</a>
-        <a href="#/ActorWithFilm">Asociar actor con una pelicula</a>
-      </nav>
-    </header>
 
-    <main class="container">
-      <router-view></router-view>
-    </main>
-    <footer>
-    </footer>
-</div>
+  </div>
 </template>
 
 <script>
-export default {
+    export default {
+        name: "app",
+        data(){
+            return{
+
+            }
+        }
+    }
+</script>
+
+<style>
+#app {
 
 }
-</script>
+</style>
