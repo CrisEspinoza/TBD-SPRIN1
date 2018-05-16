@@ -19,17 +19,21 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'Taller1-db'
-version = '0.0.1-SNAPSHOT'
+//version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-jar {
-	baseName = 'TBDG7'
-	version = '1.0'
-}
+//jar {
+//	baseName = 'TBDG7'
+//	version = '1.0'
+//}
 
 repositories {
 	mavenCentral()
+}
+
+configurations{
+	providedRuntime
 }
 
 dependencies {
