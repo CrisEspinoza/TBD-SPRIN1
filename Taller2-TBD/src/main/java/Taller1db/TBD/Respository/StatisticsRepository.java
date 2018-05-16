@@ -10,5 +10,4 @@ import java.util.List;
 public interface StatisticsRepository extends CrudRepository<Statistics,Long> {
 
     Statistics findStatisticsById (Long id);
-    List<Statistics> findByOrOrderByLastUpdateDes();
 }

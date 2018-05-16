@@ -31,7 +31,7 @@ public class TwitterListener {
 	@Autowired
 	private MongoTemplate mongo;
 
-	MongoClient mongoo = new MongoClient("localhost",27017);
+	MongoClient mongoo = new MongoClient("138.197.128.130",27017);
 	DB database = mongoo.getDB("twitter7");
 	DBCollection collection = database.getCollection("futbol");
 	@PostConstruct
