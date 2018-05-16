@@ -1,9 +1,9 @@
-FROM gradle:4.3-jdk-alpine
+FROM gradle:4.7
 
-ADD --chown=gradle . /code
+COPY ././ /var/huasoman
 
-WORKDIR /code
+WORKDIR ./ /var/huasoman
 
 EXPOSE 8080
 
-CMD [ "gradle" , "clean" , "spring-boot:run" ]
+CMD [ "gradle", "bootrun" ]
