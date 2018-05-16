@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e006dfb2-1621-4fc0-a5de-0deef75a131e" name="Default" comment="" />
+    <list default="true" id="2cfdc6ef-a9b4-45a2-b609-72c5618c3475" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,23 +15,6 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="TBD" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -66,8 +48,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+      <file leaf-file-name="ClubRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Respository/ClubRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="555">
               <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
@@ -99,10 +81,12 @@
       <file leaf-file-name="ClubRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Respository/ClubRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="437">
+              <caret line="31" column="53" lean-forward="true" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#767#768#0" expanded="true" />
+                <element signature="e#814#815#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,7 +130,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -154,7 +137,7 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1" />
+        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-all/87kuriyahurjjkki3zii366f2/gradle-4.5.1" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -595,21 +578,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/colectorTwitter/src/main/java/com/tbd/twitter/TwitterListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Entities/Commune.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Entities/Keyword.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Entities/Region.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/Palabras/Analizador.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Service/IService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Service/ServiceImpl.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/SentimentAnalysisApplicationConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/Classifier.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Entities/Statistics.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Entities/Club.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/Analizador.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/schedulerAnalisis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/TbdApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Respository/StatisticsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Rest/ClubService.java" />
       </list>
     </option>
   </component>
@@ -619,18 +590,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="68" />
-    <option name="y" value="53" />
+    <option name="x" value="226" />
+    <option name="y" value="64" />
     <option name="width" value="1279" />
     <option name="height" value="696" />
   </component>
@@ -643,11 +608,11 @@
         <subPane>
           <expand>
             <path>
-              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller2-TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Taller2-TBD" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller2-TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Taller2-TBD" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="colectorTwitter" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -658,7 +623,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller2-TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Taller2-TBD" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="colectorTwitter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
@@ -714,14 +679,14 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller2-TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Taller2-TBD" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller2-TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Taller2-TBD" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
@@ -729,7 +694,7 @@
               <item name="TBD" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller2-TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Taller2-TBD" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
@@ -738,7 +703,7 @@
               <item name="Analyzer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller2-TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Taller2-TBD" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
@@ -747,7 +712,7 @@
               <item name="Entities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller2-TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Taller2-TBD" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
@@ -756,13 +721,20 @@
               <item name="Respository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller2-TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Taller2-TBD" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="TBD" type="462c0819:PsiDirectoryNode" />
               <item name="Rest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taller2-TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taller2-TBD" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -774,20 +746,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Escritorio/nv2/Proyecto_TDB/Back_end" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/colectorTwitter" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -801,18 +764,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TbdApplication">
-    <configuration name="TbdApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Taller1db.TBD.TbdApplication" />
-      <module name="TBD_main" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Taller1db.TBD.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -831,10 +783,6 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
-    </configuration>
-    <configuration name="TbdApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="TBD_main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="Taller1db.TBD.TbdApplication" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -872,28 +820,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e006dfb2-1621-4fc0-a5de-0deef75a131e" name="Default" comment="" />
-      <created>1526267210586</created>
+      <changelist id="2cfdc6ef-a9b4-45a2-b609-72c5618c3475" name="Default" comment="" />
+      <created>1526433953872</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1526267210586</updated>
-      <workItem from="1526267215300" duration="1511000" />
-      <workItem from="1526270974295" duration="5978000" />
-      <workItem from="1526280051773" duration="3307000" />
+      <updated>1526433953872</updated>
+      <workItem from="1526433958408" duration="4425000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15070000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="4425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
@@ -941,11 +878,6 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="2" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/Respository/clubRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/Indice.java">
@@ -968,11 +900,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Entities/Region.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Entities/Statistics.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/schedulerAnalisis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="75" selection-start-line="75" selection-end-line="75" />
@@ -1024,11 +956,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Service/IService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Service/ServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Rest/StatisticsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
@@ -1038,8 +970,8 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Analyzer/PalabrasMalas.txt" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.16.Final/840cc50cf9585c4a69a0c4b9a9cc5b20b0abbb7e/hibernate-core-5.2.16.Final-sources.jar!/org/hibernate/collection/internal/AbstractPersistentCollection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="581" selection-start-line="581" selection-end-line="581" />
+        <state relative-caret-position="60">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1161,10 +1093,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Taller1db/TBD/Rest/ClubService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-748">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="437">
+          <caret line="31" column="53" lean-forward="true" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
           </folding>
         </state>
       </provider>

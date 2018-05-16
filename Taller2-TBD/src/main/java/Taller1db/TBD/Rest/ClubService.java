@@ -5,20 +5,17 @@ import Taller1db.TBD.Entities.Statistics;
 import Taller1db.TBD.Respository.ClubRepository;
 import Taller1db.TBD.Respository.StatisticsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
-@CrossOrigin
-@RestController
-@RequestMapping("/club")
 public class ClubService {
 
     @Autowired
     private ClubRepository clubRepository;
-
-    @Autowired
-    private StatisticsRepository statisticsRepository;
 
     // retorna todos los club de la base de datos club, se llama con la ruta /club
     @RequestMapping(method = RequestMethod.GET)
@@ -31,19 +28,7 @@ public class ClubService {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
     public Club getClub(@PathVariable Integer id) {
-        Long clubId = id.longValue();
-        return clubRepository.findClubById(clubId);
-    }
-
-    /*
-     */
-    @RequestMapping(value = "/grafic1", method = RequestMethod.GET)
-    @ResponseBody
-    public Statistics getStatisGeneral() {
-
-        List<Statistics> listStatis = statisticsRepository.findByOrOrderByLastUpdateDes();
-        Statistics statistics = listStatis.get(0);
-
-        return statistics;
+        Long staticId = id.longValue();
+        return clubRepository.findClubById(staticId);
     }
 }
