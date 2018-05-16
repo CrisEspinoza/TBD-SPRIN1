@@ -6,4 +6,4 @@ WORKDIR ./ /var/huasoman
 
 EXPOSE 8080
 
-CMD [ "gradle" , "clean" , "spring-boot:run" ]
+CMD [ "gradle", "bootrun" ]
