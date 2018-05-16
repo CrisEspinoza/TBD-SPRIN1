@@ -35,7 +35,7 @@ public class schedulerAnalisis {
 
 
 
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(cron="0 0 * * * *")
     public void analizador() throws IOException {
 
 //        this.analisisGeneral();
