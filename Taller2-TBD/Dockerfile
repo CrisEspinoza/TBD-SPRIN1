@@ -1,8 +1,8 @@
-FROM gradle:4.7
+FROM gradle:4.3-jdk-alpine
 
-COPY ././ /var/huasoman
+ADD --chown=gradle . /code
 
-WORKDIR ./ /var/huasoman
+WORKDIR /code
 
 EXPOSE 8080
 
