@@ -7,6 +7,8 @@ import Taller1db.TBD.Respository.StatisticsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 
@@ -15,6 +17,8 @@ import java.util.List;
 @RequestMapping("/club")
 public class ClubService {
 
+
+
     @Autowired
     private ClubRepository clubRepository;
 
@@ -22,7 +26,12 @@ public class ClubService {
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
     public List<Club> getAllClub() {
-        return clubRepository.findAll();
+        List<Club> clubs=  clubRepository.findAll();
+        for (Club c: clubs) {
+            c.getStatistics().sort(Comparator.comparing(Statistics::getId));
+        }
+//
+        return clubs;
     }
 
     // retorna un determinado club segun la id entregada, se llama con la ruta /club/id
@@ -30,6 +39,8 @@ public class ClubService {
     @ResponseBody
     public Club getClub(@PathVariable Integer id) {
         Long staticId = id.longValue();
-        return clubRepository.findClubById(staticId);
+        Club club= clubRepository.findClubById(staticId);
+        club.getStatistics().sort(Comparator.comparing(Statistics::getId));
+        return club;
     }
 }

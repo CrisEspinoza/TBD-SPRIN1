@@ -35,10 +35,10 @@ public class schedulerAnalisis {
 
 
 
-    @Scheduled(cron="0 0 * * * *")
-    public void analizador() throws IOException {
 
-//        this.analisisGeneral();
+    @Scheduled(cron="0 0 * * * * ")
+    public void analizador() throws IOException {
+        this.analisisGeneral();
 
         this.analisisEspecifico();
 
@@ -52,7 +52,7 @@ public class schedulerAnalisis {
 
     public void analisisGeneral() throws IOException {
 
-        MongoClient mongoClient = new MongoClient("localhost",27017);
+        MongoClient mongoClient= new MongoClient("138.197.128.130",27017);
         DB db = mongoClient.getDB("twitter7");
         DBCollection collection = db.getCollection("futbol");
         DBCursor cursor = collection.find();
@@ -132,37 +132,34 @@ public class schedulerAnalisis {
 
 
             for (Club equipo: clubs) {
-                ArrayList<String> tweets;
+                if (equipo.getId() != 17){
+                    ArrayList<String> tweets;
                 String busqueda = equipo.getName();
                 for (Keyword apodo: equipo.getKeywords()) {
                     busqueda = " "+apodo.getName_keyword();
                 }
 
-                System.out.println("%%%%% "+ busqueda+"%%%%%%%");
+                System.out.println("%%%%% " + busqueda + "%%%%%%%");
                 tweets = indice.buscar(busqueda);
-
-                System.out.println("%%%%% "+ tweets.toString()+"%%%%%%%");
-
-
+//
+//                System.out.println("%%%%% " + tweets.toString() + "%%%%%%%");
 
 
-                for (String tweet: tweets) {
-                    HashMap<String,Double> resultado = classifier.classify(tweet);
+                for (String tweet : tweets) {
+                    HashMap<String, Double> resultado = classifier.classify(tweet);
 
-                    if (resultado.get("positive")> resultado.get("negative")){
-                        acumulador[0]+=1;
-                    }
-                    else if(resultado.get("positive")< resultado.get("negative")){
-                        acumulador[1]+=1;
-                    }
-                    else {
-                        acumulador[2]+=1;
+                    if (resultado.get("positive") > resultado.get("negative")) {
+                        acumulador[0] += 1;
+                    } else if (resultado.get("positive") < resultado.get("negative")) {
+                        acumulador[1] += 1;
+                    } else {
+                        acumulador[2] += 1;
                     }
 
                 }
 
-            Date date = new Date();
-            long time = date.getTime();
+                Date date = new Date();
+                long time = date.getTime();
 //
 //            Statistics statistics = new Statistics();
 //            statistics.setPositive_value(acumulador.get(0));
@@ -185,11 +182,12 @@ public class schedulerAnalisis {
                 clubRepository.save(equipo);
 
 
-                System.out.println("***************"+equipo.getName()+"******************************");
+                System.out.println("***************" + equipo.getName() + "******************************");
                 System.out.println("*********************************************");
-                System.out.println("El resultado es :"+acumulador[0]+","+acumulador[1]+","+acumulador[2]);
+                System.out.println("El resultado es :" + acumulador[0] + "," + acumulador[1] + "," + acumulador[2]);
                 System.out.println("*********************************************");
                 System.out.println("*********************************************");
+            }
 
             }
 

@@ -46,7 +46,7 @@ import com.mongodb.client.MongoCollection;
 
 public class Indice{
 
-    MongoClient mongoClient = new MongoClient("localhost",27017);
+    MongoClient mongoClient = new MongoClient("138.197.128.130",27017);
     DB db = mongoClient.getDB("twitter7");
     DBCollection collection = db.getCollection("futbol");
     DBCursor cursor = collection.find();

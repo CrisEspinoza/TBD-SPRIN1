@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -30,9 +31,9 @@ public class Club implements Serializable {
     private Timestamp lastUpdate;
 
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    @JsonIgnore
+
     @JoinColumn(name ="club_id")
-    private Set<Statistics> statistics;
+    private List<Statistics> statistics;
 
     @OneToMany(mappedBy="club")
     @JsonIgnore
@@ -42,11 +43,11 @@ public class Club implements Serializable {
 
     }
 
-    public Set<Statistics> getStatistics() {
+    public List<Statistics> getStatistics() {
         return statistics;
     }
 
-    public void setStatistics(Set<Statistics> statistics) {
+    public void setStatistics(List<Statistics> statistics) {
         this.statistics = statistics;
     }
 
