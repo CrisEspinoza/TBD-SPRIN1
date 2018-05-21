@@ -2,14 +2,23 @@
     <div>
         <br>
 
-        <label>Gráfico del club {{datos.nombreEleccion}} vs promedios generales de la liga:</label>
+         <div class="">
+  <label class="">Gráfico del club {{datos[this.value].name}}:</label>
+      <div style="float:right;">
+    <label for="select">Seleccione un equipo:</label>
+    <select @change="modificarGrafico" v-model="value"  name="" id="select">
+        <option :key="i" :value="i" v-for="(equipo,i) in datos">{{equipo.name}}</option>
+    </select>
+
+      </div>
+  </div>
         <br><br>
         <hr>
         <br><br>
 
-        <div style="width:50%; float: left;"  >
+        <div  v-if="this.showd" style="width:50%; float: left;"  >
 
-            <vue-chart  v-if="this.chartData !== null" type="horizontalBar" :data="this.chartData"></vue-chart>
+            <vue-chart   v-if="this.chartData !== null"  type="horizontalBar" :data="this.chartData"></vue-chart>
             <div v-else>
                 <div class=" lds-css ng-scope">
                     <div style="width:100%;height:100%" class="lds-bars">
@@ -60,6 +69,8 @@
 
         data: () => ({
         chartData: null,
+        value:{},
+        showd:false,
         fantasmaData: null,
         barra: true,
         torta: false,
@@ -68,13 +79,31 @@
     }),
 
     created() {
+        this.showd=true;
+         this.value=0;
         console.log("estoy creando");
-        this.crearGrafico();
-        this.crearGraficoFantasma();
+        this.chartData=this.crearGrafico();
+        this.fantasmaData=this.crearGraficoFantasma();
         console.log("grafico creado", this.chartData);
     },
+  
+
 
     methods: {
+         modificarGrafico(){
+            console.log("*********"+this.datos);
+            this.showd=false;
+           this.chartData= this.crearGrafico();
+           console.log(this.chartData.datasets[0].data);
+           this.showd=false;
+            this.$nextTick(() => {
+                    this.showd = true
+                    console.log('re-render start')
+                    this.$nextTick(() => {
+                        console.log('re-render end')
+                    })
+                     })
+        },
 
         mostrarBarra()
         {
@@ -109,8 +138,8 @@
 
         crearGrafico()
         {
-
-            this.chartData = {
+            console.log("*******values es :"+ this.value)
+            let chartData = {
                 labels: [],
                 datasets: [
                     {
@@ -124,31 +153,31 @@
 
             };
             /* Largo  */
-            var tam = this._props.datos.dataEquipoSeleccionado.statistics.length
-            console.log("estoy trabjando con el club:", this._props.datos.dataEquipoSeleccionado.name)
+            var tam = this.datos[this.value].statistics.length
+            console.log("estoy trabjando con el club:", this.datos[this.value].name)
             /*Primer elemento de fecha*/
-            this.chartData.labels.push(this.timeConverter(this._props.datos.dataEquipoSeleccionado.statistics[0].lastUpdate))
+            chartData.labels.push(this.timeConverter(this.datos[this.value].statistics[0].lastUpdate))
             /*Segundo elemento intermedio de fecha*/
-            this.chartData.labels.push(this.timeConverter(this._props.datos.dataEquipoSeleccionado.statistics[Math.trunc(tam / 2)].lastUpdate))
+            chartData.labels.push(this.timeConverter(this.datos[this.value].statistics[Math.trunc(tam / 2)].lastUpdate))
             /*Ultima fecha*/
-            this.chartData.labels.push(this.timeConverter(this._props.datos.dataEquipoSeleccionado.statistics[tam - 1].lastUpdate))
-            console.log("Los datos obtenidos son:", this.chartData.labels)
+            chartData.labels.push(this.timeConverter(this.datos[this.value].statistics[tam - 1].lastUpdate))
+            // console.log("Los datos obtenidos son:", this.chartData.labels)
 
             /**Comentarios positivos/
              /*Primer elemento de fecha*/
-            this.chartData.datasets[0].data.push(this._props.datos.dataEquipoSeleccionado.statistics[0].positive_value)
+            chartData.datasets[0].data.push(this.datos[this.value].statistics[0].positive_value)
             /*Segundo elemento intermedio de fecha*/
-            this.chartData.datasets[0].data.push(this._props.datos.dataEquipoSeleccionado.statistics[Math.trunc(tam / 2)].positive_value)
+            chartData.datasets[0].data.push(this.datos[this.value].statistics[Math.trunc(tam / 2)].positive_value)
             /*Ultima fecha*/
-            this.chartData.datasets[0].data.push(this._props.datos.dataEquipoSeleccionado.statistics[tam - 1].positive_value)
+            chartData.datasets[0].data.push(this.datos[this.value].statistics[tam - 1].positive_value)
 
-
+            return chartData;
         },
 
         crearGraficoFantasma()
         {
 
-            this.fantasmaData = {
+            let fantasmaData = {
                 labels: [],
                 datasets: [
                     {
@@ -161,23 +190,23 @@
 
             };
             /* Largo  */
-            var tam = this._props.datos.dataEquipoFantasma.statistics.length
+            var tam = this.datos[16].statistics.length
             /*Primer elemento de fecha*/
-            this.fantasmaData.labels.push(this.timeConverter(this._props.datos.dataEquipoFantasma.statistics[0].lastUpdate))
+           fantasmaData.labels.push(this.timeConverter(this.datos[16].statistics[0].lastUpdate))
             /*Segundo elemento intermedio de fecha*/
-            this.fantasmaData.labels.push(this.timeConverter(this._props.datos.dataEquipoFantasma.statistics[Math.trunc(tam / 2)].lastUpdate))
+            fantasmaData.labels.push(this.timeConverter(this.datos[16].statistics[Math.trunc(tam / 2)].lastUpdate))
             /*Ultima fecha*/
-            this.fantasmaData.labels.push(this.timeConverter(this._props.datos.dataEquipoFantasma.statistics[tam - 1].lastUpdate))
+            fantasmaData.labels.push(this.timeConverter(this.datos[16].statistics[tam - 1].lastUpdate))
             console.log("Los datos obtenidos son:", this.chartData.labels)
 
             /**Comentarios positivos/
              /*Primer elemento de fecha*/
-            this.fantasmaData.datasets[0].data.push(this._props.datos.dataEquipoFantasma.statistics[0].positive_value)
+            fantasmaData.datasets[0].data.push(this.datos[16].statistics[0].positive_value)
             /*Segundo elemento intermedio de fecha*/
-            this.fantasmaData.datasets[0].data.push(this._props.datos.dataEquipoFantasma.statistics[Math.trunc(tam / 2)].positive_value)
+            fantasmaData.datasets[0].data.push(this.datos[16].statistics[Math.trunc(tam / 2)].positive_value)
             /*Ultima fecha*/
-            this.fantasmaData.datasets[0].data.push(this._props.datos.dataEquipoFantasma.statistics[tam - 1].positive_value)
-
+            fantasmaData.datasets[0].data.push(this.datos[16].statistics[tam - 1].positive_value)
+            return fantasmaData
 
         }
 

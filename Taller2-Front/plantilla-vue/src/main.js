@@ -3,7 +3,7 @@ import App from './App.vue';
 import VueRouter from 'vue-router';
 import approvalTeamsGraph from './approvalTeamsGraph.vue';
 import data from './dataEquipos.vue'
-import estadisticas from './estadisticasEquipos.vue'
+import estadisticas from './EstadisticasEquipos.vue'
 import trofeos from './trofeos.vue'
 import ligaChilena from './doughChart.vue'
 import Index from './Index.vue';
@@ -21,7 +21,7 @@ Vue.use(VueResource);
 const routes = [
     { path: '/index', alias: '/', component: Index},
     { path: '/approvalTeamsGraph', component: approvalTeamsGraph},
-    { path: '/dataEquipo', component: data},
+    { path: '/dataEquipo/', component: data },
     { path: '/estadisticas', component: estadisticas},
     { path: '/trofeos', component: trofeos},
     { path: '/ligaChilena', component: ligaChilena}
