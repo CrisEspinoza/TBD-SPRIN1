@@ -6,15 +6,8 @@
             </li>
            <li role="presentation" class="dropdown" v-on:click="setSelectedItem"><router-link to="">Datos por Equipo</router-link></li>
              <li role="presentation" class="dropdown" v-on:click="setSelectedItemE"><router-link to="">Estadisticas Equipos</router-link></li>
-            <li role="presentation" class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    Graficos <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li v-on:click="setSelectedItemTrofeos"><a href="#">Grafico Trofeos por Equipo Liga Chilena</a> </li>
-                </ul>
+            <li role="presentation" class="dropdown" v-on:click="setSelectedItemTrofeos"><a href="#" >Trofeos por Equipo Liga Chilena </a>
             </li>
-            <li role="presentation"><a href="#">Help</a></li>
         </ul>
     </div>
     <div>
