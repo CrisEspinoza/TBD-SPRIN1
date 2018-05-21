@@ -155,8 +155,7 @@ import estadisticasEquipo from './estadisticasEquipos.vue';
         this.$http.get("http://159.65.128.52:8080/TBD-G7/club").then(response => {
             this.clubs = response.data;
         console.log("club:" + this.clubs);
-        this.crearGrafico();
-        console.log("grafico creado", this.chartData);
+        console.log("data de clubes obtenida con exito!", this.clubs);
     });
     },
 
