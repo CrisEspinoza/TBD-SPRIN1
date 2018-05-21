@@ -6,9 +6,6 @@
     <br><br>
     <hr>
     <br><br>
-    <ul class="nav nav-pills">
-            <li role="presentation" class="active"><a href="#/index">Volver</a></li>
-    </ul>
     <div style="width:100%; float: left;"  >
         
         <vue-chart  v-if="this.chartData !== null" type="horizontalBar" :data="this.chartData"></vue-chart>
@@ -54,6 +51,7 @@
 import VueChart from "vue-chart-js";
 
 export default {
+  props:['datos'],
   name: "App",
 
   components: {
@@ -70,16 +68,9 @@ export default {
     
   }),
   created() {
-    console.log("estoy creando");
-    this.$http.get("http://159.65.128.52:8080/TBD-G7/club").then(response => {
-      this.clubs = response.data;
-      console.log("club:" + this.clubs);
       this.crearGrafico();
       this.crearTorta();
       console.log("grafico creado", this.chartData);
-
-     
-    });
   },
   
   methods: {
@@ -121,7 +112,7 @@ export default {
                   {
                       label: ["Promedio de comentarios positivos","Promedio de comentarios negativos"],
                       backgroundColor: ["#56FB4C", "#FB5C57"],
-                      data: [this.clubs[16].statistics[0].positive_value, this.clubs[16].statistics[0].negative_value]
+                      data: [this._props.datos[16].statistics[0].positive_value, this._props.datos[16].statistics[0].negative_value]
                   },
 
               ]
@@ -147,21 +138,18 @@ export default {
             },
         ]
       };
-     /* console.log("char data es " + this.chartData);
-    
+      console.log(this._props);
+      for (let i = 0; i < this._props.datos.length-1; i++) {
 
-      console.log("el tamaño es :" + this.clubs.length);*/
-      for (let i = 0; i < this.clubs.length-1; i++) {
-
-          console.log("el data usado es",this.clubs[16].statistics[0].positive_value)
+        console.log("el data usado es",this._props.datos[16].statistics[0].positive_value)
          /* this.colorRandom();*/
         this.chartData.labels = this.chartData.labels.concat([
-          this.clubs[i].name
+          this._props.datos[i].name
          
         ]);
-        let tam = this.clubs[i].statistics.length
-        this.chartData.datasets[0].data.push( this.clubs[i].statistics[tam-1].positive_value) 
-        this.chartData.datasets[1].data.push( this.clubs[i].statistics[tam-1].negative_value)
+        let tam = this._props.datos[i].statistics.length
+        this.chartData.datasets[0].data.push( this._props.datos[i].statistics[tam-1].positive_value) 
+        this.chartData.datasets[1].data.push( this._props.datos[i].statistics[tam-1].negative_value)
       }
       /*
       console.log("char:" + this.chartData.labels);

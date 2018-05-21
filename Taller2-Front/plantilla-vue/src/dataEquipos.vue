@@ -5,7 +5,7 @@
   <div class="">
   <label class="">Gráfico del club {{datos[this.value].name}}:</label>
       <div style="float:right;">
-    <label for="select">Seleccione un equipo:</label>
+    <label  for="select" >Seleccione un equipo:</label>
     <select @change="modificarGrafico" v-model="value"  name="" id="select">
         <option :key="i" :value="i" v-for="(equipo,i) in datos">{{equipo.name}}</option>
     </select>

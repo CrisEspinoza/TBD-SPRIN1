@@ -5,7 +5,7 @@ import approvalTeamsGraph from './approvalTeamsGraph.vue';
 import data from './dataEquipos.vue'
 import estadisticas from './EstadisticasEquipos.vue'
 import trofeos from './trofeos.vue'
-import ligaChilena from './doughChart.vue'
+import ligaChilena from './ligaChilena.vue'
 import Index from './Index.vue';
 import VueResource from 'vue-resource';
 

@@ -6,10 +6,6 @@
         <br><br>
         <hr>
         <br><br>
-        <ul class="nav nav-pills">
-            <li role="presentation" class="active"><a href="#/index">Volver</a></li>
-        </ul>
-
         <div style="width:100%; float: left;"  >
 
             <vue-chart  v-if="this.chartData !== null" type="horizontalBar" :data="this.chartData"></vue-chart>
@@ -56,7 +52,7 @@
     Chart.defaults.global.legend.display = false;
     export default {
         name: "trofeos",
-
+        props:['datos'],
         components: {
             VueChart
         },
@@ -65,20 +61,12 @@
         chartData: null,
         barra:true,
         torta:false,
-        clubs: [],
         colores: []
 
     }),
     created() {
-        console.log("estoy creando");
-        this.$http.get("http://159.65.128.52:8080/TBD-G7/club").then(response => {
-            this.clubs = response.data;
-        console.log("club:" + this.clubs);
         this.crearGrafico();
         console.log("grafico creado", this.chartData);
-
-
-    });
     },
 
     methods: {
@@ -136,13 +124,13 @@
 
 
              console.log("el tamaño es :" + this.clubs.length);*/
-            for (let i = 0; i < this.clubs.length-1; i++) {
+            for (let i = 0; i < this._props.datos.length-1; i++) {
                 this.colorRandom();
                 this.chartData.labels = this.chartData.labels.concat([
-                    this.clubs[i].name
+                    this._props.datos[i].name
 
                 ]);
-                this.chartData.datasets[0].data.push( this.clubs[i].trophies)
+                this.chartData.datasets[0].data.push( this._props.datos[i].trophies)
             }
             /*
             console.log("char:" + this.chartData.labels);
