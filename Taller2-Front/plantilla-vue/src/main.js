@@ -2,6 +2,10 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import approvalTeamsGraph from './approvalTeamsGraph.vue';
+import data from './dataEquipos.vue'
+import estadisticas from './estadisticasEquipos.vue'
+import trofeos from './trofeos.vue'
+import ligaChilena from './doughChart.vue'
 import Index from './Index.vue';
 import VueResource from 'vue-resource';
 
@@ -15,8 +19,12 @@ Vue.use(VueResource);
 
 
 const routes = [
-  { path: '/index', alias: '/', component: Index},
-    { path: '/approvalTeamsGraph', component: approvalTeamsGraph}
+    { path: '/index', alias: '/', component: Index},
+    { path: '/approvalTeamsGraph', component: approvalTeamsGraph},
+    { path: '/dataEquipo', component: data},
+    { path: '/estadisticas', component: estadisticas},
+    { path: '/trofeos', component: trofeos},
+    { path: '/ligaChilena', component: ligaChilena}
 ];
 
 // Create the router instance and pass the `routes` option
