@@ -36,7 +36,7 @@ public class schedulerAnalisis {
 
 
 
-    @Scheduled(cron="0 0 * * * * ")
+    @Scheduled(cron="0 0 0/10 * * ?")
     public void analizador() throws IOException {
         this.analisisGeneral();
 
@@ -65,7 +65,7 @@ public class schedulerAnalisis {
         while (cursor.hasNext()) {
             DBObject tweet = cursor.next();
 
-            System.out.println(">>>>>"+tweet.get("text").toString());
+           // System.out.println(">>>>>"+tweet.get("text").toString());
             HashMap<String,Double> resultado = classifier.classify(tweet.get("text").toString());
             if (resultado.get("positive")> resultado.get("negative")){
                 acumulador[0]+=1;
@@ -125,13 +125,14 @@ public class schedulerAnalisis {
             Iterable<Club>  clubs= clubRepository.findAll();
             Indice indice = new Indice();
             indice.indexar();
-            int[] acumulador= new int[3];
-            acumulador[0]=0;
-            acumulador[1]=0;
-            acumulador[2]=0;
-
 
             for (Club equipo: clubs) {
+                int[] acumulador= new int[3];
+                acumulador[0]=0;
+                acumulador[1]=0;
+                acumulador[2]=0;
+
+
                 if (equipo.getId() != 17){
                     ArrayList<String> tweets;
                 String busqueda = equipo.getName();
