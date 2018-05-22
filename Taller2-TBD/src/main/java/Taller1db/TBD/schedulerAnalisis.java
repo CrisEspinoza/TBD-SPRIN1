@@ -36,7 +36,7 @@ public class schedulerAnalisis {
 
 
 
-    @Scheduled(cron="0 0 0/10 * * ?")
+    @Scheduled(cron = "0 0 0/10 * * ?")
     public void analizador() throws IOException {
         this.analisisGeneral();
 
@@ -137,7 +137,7 @@ public class schedulerAnalisis {
                     ArrayList<String> tweets;
                 String busqueda = equipo.getName();
                 for (Keyword apodo: equipo.getKeywords()) {
-                    busqueda = " "+apodo.getName_keyword();
+                    busqueda =busqueda+" "+apodo.getName_keyword();
                 }
 
                 System.out.println("%%%%% " + busqueda + "%%%%%%%");
