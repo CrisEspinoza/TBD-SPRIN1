@@ -2,12 +2,13 @@
 <div>
     <br>
 
-    <label>Gráfico general Liga Chilena:</label>
+    <label>Gráfico general Liga Chilena</label>
     <br><br>
     <hr>
     <br><br>
+
     <div style="width:100%; float: left;"  >
-        
+
         <vue-chart  v-if="this.chartData !== null" type="horizontalBar" :data="this.chartData"></vue-chart>
             <div v-else>
              <div class=" lds-css ng-scope">
@@ -15,8 +16,8 @@
                    <div></div><div></div><div></div><div></div> <div></div>
                 </div>
               </div>
-            </div> 
-    
+            </div>
+
    </div>
 
     <div style="width:50%; float:right;">
@@ -24,22 +25,21 @@
          <div v-else>
              <div class="lds-css  ng-scope">
                  <div style="width:100%;height:100%" class="lds-bars">
-                   <div></div><div></div><div></div><div></div> <div></div> 
+                   <div></div><div></div><div></div><div></div> <div></div>
                 </div>
               </div>
-            </div>      
+            </div>
     </div>
 
-   
+
     <div>
         <h1>Descripción:</h1>
 
-    <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-        anim id est laborum."
+    <p> "Este gráfico muestra la aprobación de la comunidad con respecto a los equipos de la primera división que
+        participan en la liga chilena.
+        Se puede observar la cantidad de comentarios positivos que ha hecho la comunidad hacia el respectivo
+        equipo mediante las barras de color verde. De igual manera se pueden observar la cantidad de
+        comentarios negativos que la comunidad realiza a dicho equipo observando las barras de color rojo."
     </p>
     </div>
 

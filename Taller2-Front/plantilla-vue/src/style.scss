@@ -175,7 +175,7 @@ header{
   justify-content: space-between;
   .branding{
     img{
-      width: 20px;
+      width: 24px;
       display: inline-block;
     }
     span{
@@ -184,7 +184,7 @@ header{
   }
   nav{
     a{
-      font-size: 0.8em;
+      font-size: 2em;
       display: inline-block;
       padding: 5px 10px;
       color:darken($secondary-color, 10%);
@@ -229,7 +229,7 @@ header{
     }
     .date{
       color:darken($main-color,10%);
-      font-size: 0.9em;
+      font-size: 2em;
     }
     img{
       border: 1px solid rgba($secondary-color,0.5);

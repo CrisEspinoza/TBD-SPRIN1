@@ -3,6 +3,7 @@
         <div class="panel-heading">
             <h1>Bienvenidos al Sprint 1 del Grupo 7 - TDB <small>The beast team :3</small></h1>
         </div>
+
         <div class="panel-body">
             <hr>
             <menu-component></menu-component>

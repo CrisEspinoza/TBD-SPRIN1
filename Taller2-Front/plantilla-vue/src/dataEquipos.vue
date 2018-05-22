@@ -3,7 +3,7 @@
   <br>
 
   <div class="">
-  <label class="">Gráfico del club {{datos[this.value].name}}:</label>
+  <label class="">Gráfico del club {{datos[this.value].name}}</label>
       <div style="float:right;">
     <label  for="select" >Seleccione un equipo:</label>
     <select @change="modificarGrafico" v-model="value"  name="" id="select">
@@ -42,15 +42,13 @@
 
   </div>
   </div>
-  <div>
+  <div style="width:100%; float: left;"  >
     <h1>Descripción:</h1>
 
-    <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-      dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-      anim id est laborum."
+    <p> "Este gráfico muestra la cantidad de comentarios positivos como negativos de un equipo en especifico en un determinado
+      tiempo.
+      Dichos comentarios están epresentados en un gráfico de barras y un gráfico de torta. Los colores que toman cada tipo
+      de comentario son verde y rojo respectivamente. "
     </p>
   </div>
 

@@ -1,17 +1,15 @@
 <template>
     <div>
         <br>
-
          <div class="">
-  <label class="">Gráfico del club {{datos[this.value].name}}:</label>
-      <div style="float:right;">
-    <label for="select">Seleccione un equipo:</label>
-    <select @change="modificarGrafico" v-model="value"  name="" id="select">
-        <option :key="i" :value="i" v-for="(equipo,i) in datos">{{equipo.name}}</option>
-    </select>
-
-      </div>
-  </div>
+            <label class="">Gráfico del club {{datos[this.value].name}}</label>
+            <div style="float:right;">
+                <label for="select">Seleccione un equipo:</label>
+                <select @change="modificarGrafico" v-model="value"  name="" id="select">
+                <option :key="i" :value="i" v-for="(equipo,i) in datos">{{equipo.name}}</option>
+                </select>
+            </div>
+          </div>
         <br><br>
         <hr>
         <br><br>
@@ -43,17 +41,12 @@
         </div>
 
         <div>
-            <h1>Descripción:</h1>
+            <h2>Descripción:</h2>
 
-            <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                anim id est laborum."
-            </p>
+            <h4> "En estos gráficos se puede observar la relación existente entre los tweets obtenidos por cada equipo
+                de la primera divisón de la liga chilena con respecto al total de tweets."
+            </h4>
         </div>
-
     </div>
 </template>
 
