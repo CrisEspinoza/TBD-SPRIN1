@@ -33,13 +33,19 @@
         </div>
     </div>
 </div>
-<div v-else>
-                <div class=" lds-css ng-scope">
-                    <div style="width:100%;height:100%" class="lds-bars">
+<div v-else style="margin: 0 auto;">
+    <div style="margin: 0 auto;">
+        <div class="lds-css ng-scope" style="margin: 0 auto;">
+            <div style="width:100%;height:100%;margin:0 auto;" class="lds-facebook">
+                <div></div><div></div><div></div></div></div>
+        
+                <!-- <div class=" lds-css ng-scope" style="margin: 0 auto;">
+                    <div style="width:100%;height:100%;margin:0 auto;" class="lds-bars">
                         <div></div><div></div><div></div><div></div> <div></div>
                     </div>
-                </div>
+                </div> -->
             </div>
+    </div>
 </template>
 
 <script>
