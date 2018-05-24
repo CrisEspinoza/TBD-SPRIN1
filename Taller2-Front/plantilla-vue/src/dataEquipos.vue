@@ -6,9 +6,11 @@
   <label class="">Gráfico del club {{datos[this.value].name}}</label>
       <div style="float:right;">
     <label  for="select" >Seleccione un equipo:</label>
+        <div class="styled-select slate">
     <select @change="modificarGrafico" v-model="value"  name="" id="select">
         <option v-if="i!==16" :key="i" :value="i" v-for="(equipo,i) in datos">{{equipo.name}}</option>
     </select>
+        </div>
 
       </div>
   </div>
@@ -196,5 +198,49 @@
 </script>
 
 <style scoped>
+  iv { margin: 20px; }
+
+  /* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
+  /* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */
+  .styled-select {
+    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+    height: 29px;
+    overflow: hidden;
+    width: 240px;
+  }
+
+  .styled-select select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    width: 268px;
+  }
+
+  .styled-select.slate {
+    background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+    height: 34px;
+    width: 240px;
+  }
+
+  .styled-select.slate select {
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 34px;
+    width: 268px;
+  }
+
+  /* -------------------- Rounded Corners */
+
+
+  /* -------------------- Colors: Background */
+  .slate   { background-color: #ddd; }
+
+  /* -------------------- Colors: Text */
+  .slate select   { color: #000; }
+
+
+
 
 </style>
