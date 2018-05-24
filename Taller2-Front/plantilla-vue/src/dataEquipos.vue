@@ -31,7 +31,7 @@
 
   <div style="width:50%; float: right;"  >
 
-    <vue-chart  v-if="this.chartData !== null" type="pie" :data="this.chartData"></vue-chart>
+    <vue-chart  v-if="this.chartData !== null" type="line" :data="this.chartData"></vue-chart>
     <div v-else>
       <div class=" lds-css ng-scope">
         <div style="width:100%;height:100%" class="lds-bars">
@@ -141,14 +141,18 @@
                 datasets: [
                     {
                         label: "Comentarios positivos",
+                        borderColor: "#56FB4C",
                         backgroundColor: "#56FB4C",
-                        data: []
+                        data: [],
+                        fill: false
                     },
 
                     {
                         label: "Comentarios negativos",
+                        borderColor: "#FB5C57",
                         backgroundColor: "#FB5C57",
-                        data: []
+                        data: [],
+                        fill: false
                     },
 
 

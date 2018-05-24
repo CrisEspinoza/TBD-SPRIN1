@@ -16,7 +16,7 @@
 
         <div  v-if="this.showd" style="width:50%; float: left;"  >
 
-            <vue-chart   v-if="this.chartData !== null"  type="horizontalBar" :data="this.chartData"></vue-chart>
+            <vue-chart   v-if="this.chartData !== null"  type="line" :data="this.chartData"></vue-chart>
             <div v-else>
                 <div class=" lds-css ng-scope">
                     <div style="width:100%;height:100%" class="lds-bars">
@@ -29,7 +29,7 @@
 
         <div style="width:50%; float: right;"  >
 
-            <vue-chart  v-if="this.fantasmaData !== null" type="horizontalBar" :data="this.fantasmaData"></vue-chart>
+            <vue-chart  v-if="this.fantasmaData !== null" type="line" :data="this.fantasmaData"></vue-chart>
             <div v-else>
                 <div class=" lds-css ng-scope">
                     <div style="width:100%;height:100%" class="lds-bars">
@@ -137,8 +137,10 @@
                 datasets: [
                     {
                         title: "Gráfico por fechas, popularidad del club",
-                        backgroundColor: ["red", "blue", "gray"],
-                        data: []
+                        data: [],
+                        fill: false,
+                        borderColor: "red",
+                        pointBackgroundColor: ["blue", "green", "gray"]
                     },
 
 
@@ -174,8 +176,10 @@
                 labels: [],
                 datasets: [
                     {
-                        backgroundColor: ["red", "blue", "gray"],
-                        data: []
+                        data: [],
+                        fill: false,
+                        borderColor: "blue",
+                        pointBackgroundColor: ["red", "green", "gray"]
                     },
 
 
