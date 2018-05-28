@@ -7,7 +7,8 @@ import trofeos from './trofeos.vue'
 import ligaChilena from './ligaChilena.vue'
 import Index from './Index.vue';
 import VueResource from 'vue-resource';
-
+import ChoroplethMap from 'vue-choropleth';
+Vue.component(ChoroplethMap);
 
 require("./style.scss");
 

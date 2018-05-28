@@ -29,19 +29,6 @@
 
         </div>
 
-        <div style="width:50%; float: right;"  >
-
-            <vue-chart  v-if="this.fantasmaData !== null" type="line" :data="this.fantasmaData"></vue-chart>
-            <div v-else>
-                <div class=" lds-css ng-scope">
-                    <div style="width:100%;height:100%" class="lds-bars">
-                        <div></div><div></div><div></div><div></div> <div></div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
         <div>
             <h2>Descripción:</h2>
 
@@ -66,7 +53,6 @@
         chartData: null,
         value:{},
         showd:false,
-        fantasmaData: null,
         barra: true,
         torta: false,
         clubs: []
@@ -78,7 +64,6 @@
          this.value=0;
         console.log("estoy creando");
         this.chartData=this.crearGrafico();
-        this.fantasmaData=this.crearGraficoFantasma();
         console.log("grafico creado", this.chartData);
     },
   
@@ -144,6 +129,12 @@
                         borderColor: "red",
                         pointBackgroundColor: ["blue", "green", "gray"]
                     },
+                    {
+                        data: [],
+                        fill: false,
+                        borderColor: "blue",
+                        pointBackgroundColor: ["red", "green", "gray"]
+                    },
 
 
                 ]
@@ -168,46 +159,17 @@
             /*Ultima fecha*/
             chartData.datasets[0].data.push(this.datos[this.value].statistics[tam - 1].positive_value)
 
+            /**Comentarios positivos/
+             /*Primer elemento de fecha*/
+            chartData.datasets[1].data.push(this.datos[16].statistics[0].positive_value)
+            /*Segundo elemento intermedio de fecha*/
+            chartData.datasets[1].data.push(this.datos[16].statistics[Math.trunc(tam / 2)].positive_value)
+            /*Ultima fecha*/
+            chartData.datasets[1].data.push(this.datos[16].statistics[tam - 1].positive_value)
             return chartData;
         },
 
-        crearGraficoFantasma()
-        {
 
-            let fantasmaData = {
-                labels: [],
-                datasets: [
-                    {
-                        data: [],
-                        fill: false,
-                        borderColor: "blue",
-                        pointBackgroundColor: ["red", "green", "gray"]
-                    },
-
-
-                ]
-
-            };
-            /* Largo  */
-            var tam = this.datos[16].statistics.length
-            /*Primer elemento de fecha*/
-           fantasmaData.labels.push(this.timeConverter(this.datos[16].statistics[0].lastUpdate))
-            /*Segundo elemento intermedio de fecha*/
-            fantasmaData.labels.push(this.timeConverter(this.datos[16].statistics[Math.trunc(tam / 2)].lastUpdate))
-            /*Ultima fecha*/
-            fantasmaData.labels.push(this.timeConverter(this.datos[16].statistics[tam - 1].lastUpdate))
-            console.log("Los datos obtenidos son:", this.chartData.labels)
-
-            /**Comentarios positivos/
-             /*Primer elemento de fecha*/
-            fantasmaData.datasets[0].data.push(this.datos[16].statistics[0].positive_value)
-            /*Segundo elemento intermedio de fecha*/
-            fantasmaData.datasets[0].data.push(this.datos[16].statistics[Math.trunc(tam / 2)].positive_value)
-            /*Ultima fecha*/
-            fantasmaData.datasets[0].data.push(this.datos[16].statistics[tam - 1].positive_value)
-            return fantasmaData
-
-        }
 
     }
 

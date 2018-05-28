@@ -3,7 +3,7 @@
     <div class="container">
         <ul class="nav nav-pills">
             <li role="presentation" class="dropdown"  v-on:click="setSelectedItemHome">
-                <a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+                <a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a>
             </li>
             <li role="presentation" class="dropdown"  v-on:click="setSelectedItemLiga">
                 <a href="#" >Estadísticas equipo liga chilena</a>
@@ -13,6 +13,7 @@
             <li role="presentation" class="dropdown" v-on:click="setSelectedItemTrofeos">
                 <a href="#" >Trofeos por Equipo Liga Chilena</a>
             </li>
+            <hr>
         </ul>
     </div>
     <div>
