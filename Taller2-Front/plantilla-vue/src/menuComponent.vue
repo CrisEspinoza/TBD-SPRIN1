@@ -6,12 +6,14 @@
                 <a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a>
             </li>
             <li role="presentation" class="dropdown"  v-on:click="setSelectedItemLiga">
-                <a href="#" >Estadísticas equipo liga chilena</a>
+                <a href="#" >Estadísticas liga chilena</a>
             </li>
-           <li role="presentation" class="dropdown" v-on:click="setSelectedItem"><router-link to="">Datos por Equipo</router-link></li>
-             <li role="presentation" class="dropdown" v-on:click="setSelectedItemE"><router-link to="">Estadisticas Equipos</router-link></li>
+           <li role="presentation" class="dropdown" v-on:click="setSelectedItem"><router-link to="">Valoraciones por club</router-link></li>
+             <li role="presentation" class="dropdown" v-on:click="setSelectedItemE"><router-link to="">Análisis por club</router-link></li>
             <li role="presentation" class="dropdown" v-on:click="setSelectedItemTrofeos">
-                <a href="#" >Trofeos por Equipo Liga Chilena</a>
+                <a href="#" >Trofeos</a>
+            </li>
+            <li role="presentation" class="dropdown" v-on:click="setSelectedMapas"><router-link to="">Mapas</router-link>
             </li>
             <hr>
         </ul>
@@ -31,6 +33,9 @@
         </div>
         <div v-if="this.eleccion == 5">
             <Trofeos-component v-bind:datos="clubs"></Trofeos-component>
+        </div>
+        <div v-if="this.eleccion == 6">
+            <mapa-component v-bind:datos="mapas"></mapa-component>
         </div>
     </div>
 </div>
@@ -55,29 +60,38 @@
     import estadisticasEquipo from './EstadisticasEquipos.vue';
     import ligachilena from './ligaChilena.vue';
     import trofeos from './trofeos.vue';
+    import mapa from './mapa.vue'
     export default {
         components: {
             'home-component': home,
             'Liga-component': ligachilena,
             'Trofeos-component': trofeos,
             'EquipoDatacomponente': dataEquipo,
-            'Equipoestadisticascomponente': estadisticasEquipo
+            'Equipoestadisticascomponente': estadisticasEquipo,
+            'mapa-component': mapa
         },
         name: "menuComponent.vue",
         data(){
             return{
                 eleccion: 0,
                 clubs:null,
+                mapas: null
             }
         },
 
     created() {
         this.$http.get("http://159.65.128.52:8080/TBD-G7/club").then(response => {
             this.clubs = response.data;
-        console.log("club:" + this.clubs);
-        console.log("data de clubes obtenida con exito!", this.clubs);
+       /* console.log("club:" + this.clubs);
+        console.log("data de clubes obtenida con exito!", this.clubs);*/
         this.eleccion = 1;
     });
+        this.$http.get("http://159.65.128.52:8080/TBD-G7/mapas").then(response => {
+            this.mapas = response.data;
+            console.log("club:" + this.mapas);
+            console.log("data de mapas obtenida con exito!", this.mapas);
+            this.eleccion = 1;
+        });
     },
 
         methods: {
@@ -96,6 +110,9 @@
             },
             setSelectedItemTrofeos(){
                this.eleccion=5;
+            },
+            setSelectedMapas(){
+                this.eleccion=6;
             }
 
         },

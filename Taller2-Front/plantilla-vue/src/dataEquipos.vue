@@ -173,6 +173,7 @@
             chartData.labels.push(this.timeConverter(this.datos[this.value].statistics[Math.trunc(tam / 2)].lastUpdate))
             /*Ultima fecha*/
             chartData.labels.push(this.timeConverter(this.datos[this.value].statistics[tam - 1].lastUpdate))
+
             /**Comentarios positivos/
              /*Primer elemento de fecha*/
             chartData.datasets[0].data.push(this.datos[this.value].statistics[0].positive_value)

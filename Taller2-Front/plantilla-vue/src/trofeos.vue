@@ -45,7 +45,6 @@
 
 <script>
     import VueChart from "vue-chart-js";
-    Chart.defaults.global.legend.display = false;
     export default {
         name: "trofeos",
         props:['datos'],
@@ -110,6 +109,7 @@
                     {
                         backgroundColor: this.colores,
                         data: [],
+                        label: ["Cantidad de trofeos"]
                     },
 
 

@@ -125,14 +125,18 @@
                     {
                         title: "Gráfico por fechas, popularidad del club",
                         data: [],
+                        label: ["Equipo de la liga"],
                         fill: false,
                         borderColor: "red",
+                        backgroundColor: "red",
                         pointBackgroundColor: ["blue", "green", "gray"]
                     },
                     {
                         data: [],
+                        label: ["Promedio de la liga"],
                         fill: false,
                         borderColor: "blue",
+                        backgroundColor: "blue",
                         pointBackgroundColor: ["red", "green", "gray"]
                     },
 
