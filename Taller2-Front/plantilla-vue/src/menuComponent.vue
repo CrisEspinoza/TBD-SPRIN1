@@ -2,20 +2,32 @@
 <div v-if="this.clubs !== null">
     <div class="container">
         <ul class="nav nav-pills">
+
             <li role="presentation" class="dropdown"  v-on:click="setSelectedItemHome">
                 <a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a>
             </li>
+
             <li role="presentation" class="dropdown"  v-on:click="setSelectedItemLiga">
-                <a href="#" >Estadísticas liga chilena</a>
+                <a href="#"><span></span>Estadísticas liga chilena</a>
             </li>
-           <li role="presentation" class="dropdown" v-on:click="setSelectedItem"><router-link to="">Valoraciones por club</router-link></li>
-             <li role="presentation" class="dropdown" v-on:click="setSelectedItemE"><router-link to="">Análisis por club</router-link></li>
+
+           <li role="presentation" class="dropdown" v-on:click="setSelectedItem">
+               <router-link to="">Valoraciones por club</router-link>
+           </li>
+
+             <li role="presentation" class="dropdown" v-on:click="setSelectedItemE">
+                 <router-link to="">Análisis por club</router-link>
+             </li>
+
             <li role="presentation" class="dropdown" v-on:click="setSelectedItemTrofeos">
                 <a href="#" >Trofeos</a>
             </li>
-            <li role="presentation" class="dropdown" v-on:click="setSelectedMapas"><router-link to="">Mapas</router-link>
+
+            <li role="presentation" class="dropdown" v-on:click="setSelectedMapas">
+            <router-link to="">Mapas</router-link>
             </li>
-            <hr>
+
+
         </ul>
     </div>
     <div>
@@ -86,7 +98,7 @@
         console.log("data de clubes obtenida con exito!", this.clubs);*/
         this.eleccion = 1;
     });
-        this.$http.get("http://159.65.128.52:8080/TBD-G7/mapas").then(response => {
+        this.$http.get("http://159.65.128.52:8080/TBD-G7/maps").then(response => {
             this.mapas = response.data;
             console.log("club:" + this.mapas);
             console.log("data de mapas obtenida con exito!", this.mapas);
