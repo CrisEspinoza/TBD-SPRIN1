@@ -1,5 +1,22 @@
 <template>
-    
+
+    <div class="">
+        <label class="">Mapa de aceptación:</label>
+        <div style="float:right;">
+            <label for="select">Seleccione un criterio:</label>
+            <div class="styled-select slate">
+                <select @change="crearMapa" name="" id="select">
+<!--                No se reconoce el evento de cambio en la variable                                           -->
+                    <option v-on:click = "eventMouse">chikjhgvfhujikojhg</option>
+
+                    <option v-on:click = "crearPositiva">comentarios positivos</option>
+
+                    <option v-on:click = "crearNegativa">comentarios positivos</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
 </template>
 
 <script>
@@ -26,6 +43,7 @@
 
         data: () => ({
             showd:null,
+            eleccion: ""
         }),
 
         created() {
@@ -35,135 +53,34 @@
             this.crearMapa()
         },
         methods: {
+
+            /*  Funcion que demuestra que no funciona el evento :c  */
+            eventMouse(){
+                console.log("hice click")
+            },
+            /*       Funciones que actualizan la variable render del mapa           */
+            crearPositiva(){
+                this.eleccion = "positive_value"
+                console.log("la eleccion cambio a: ", this.eleccion)
+            },
+            crearNegativa(){
+                this.eleccion = "negative_value"
+                console.log("la eleccion cambio a: ", this.eleccion)
+            },
+
+
+
+
             crearMapa(){
-                var popData = [
-                    {
-                        "id": 12,
-                        "firstName": "Magallanes y de la Antártica Chilena",
-                        "idRegion": 320,
-                        "positive_value": 1369,
-                        "negative_value": 126,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 119,
-                        "firstName": "Aisén del General Carlos Ibáñez del Campo",
-                        "idRegion": 305,
-                        "positive_value": 70,
-                        "negative_value": 3,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 118,
-                        "firstName": "Los Lagos",
-                        "idRegion": 270,
-                        "positive_value": 3914,
-                        "negative_value": 312,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 117,
-                        "firstName": "Los Ríos",
-                        "idRegion": 395,
-                        "positive_value": 2216,
-                        "negative_value": 160,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 116,
-                        "firstName": "La Araucanía",
-                        "idRegion": 235,
-                        "positive_value": 5185,
-                        "negative_value": 463,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 115,
-                        "firstName": "Biobío",
-                        "idRegion": 176,
-                        "positive_value": 11138,
-                        "negative_value": 831,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 114,
-                        "firstName": "Maule",
-                        "idRegion": 141,
-                        "positive_value": 3860,
-                        "negative_value": 263,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 113,
-                        "firstName": "Libertador General Bernardo OHiggins",
-                        "idRegion": 104,
-                        "positive_value": 2797,
-                        "negative_value": 201,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 112,
-                        "firstName": "Metropolitana de Santiago",
-                        "idRegion": 336,
-                        "positive_value": 63766,
-                        "negative_value": 4459,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 111,
-                        "firstName": "Valparaiso",
-                        "idRegion": 57,
-                        "positive_value": 13685,
-                        "negative_value": 948,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 110,
-                        "firstName": "Coquimbo",
-                        "idRegion": 38,
-                        "positive_value": 4033,
-                        "negative_value": 253,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 109,
-                        "firstName": "Atacama",
-                        "idRegion": 25,
-                        "positive_value": 926,
-                        "negative_value": 52,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 108,
-                        "firstName": "Antofagasta",
-                        "idRegion": 12,
-                        "positive_value": 10169,
-                        "negative_value": 938,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 107,
-                        "firstName": "Tarapacá",
-                        "idRegion": 2,
-                        "positive_value": 5278,
-                        "negative_value": 272,
-                        "lastUpdate": 1527551344000
-                    },
-                    {
-                        "id": 120,
-                        "firstName": "Arica y Parinacota",
-                        "idRegion": 410,
-                        "positive_value": 880,
-                        "negative_value": 51,
-                        "lastUpdate": 1527551344000
-                    }
-                ]
+                /*    Datos pasados por la vista externa bind  (llegan bien)       */
+                var popData = this.datos
 
                 var chart = new d3plus.Geomap()
                 /*.width()
                 .height()*/
                     .data(popData)
-                    .colorScale("positive_value")
+                    /*                Variables que pasa el dato a graficar                 */
+                    .colorScale(this.eleccion)
                     .topojson ({"type":"Topology","transform":{"scale":[0.0009293692125560269,0.003847579048065936],
                             "translate":[-75.710319519043,-55.97949600219725]},
                         "objects":{"chile-regions":{"type":"GeometryCollection","geometries":
@@ -205,7 +122,6 @@
                     })
 
                 chart
-                    .active(true)
                     .ocean("transparent")
                     .colorScaleConfig({color: ["#6a2c70", "#b83b5e", "#f08a5d", "#f9ed69", "#D8F781"]})
                     .render();
