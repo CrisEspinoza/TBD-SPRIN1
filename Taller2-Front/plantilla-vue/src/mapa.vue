@@ -13,6 +13,10 @@
 
                     <option  value="2">comentarios negativos</option>
                 </select>
+
+                <div v-if="this.showd" id="viz">
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -43,17 +47,22 @@
         },
 
         data: () => ({
-            showd:null,
+            showd:true,
             eleccion: "",
+            chart:null
             
         }),
 
-        created() {
+       mounted() {
             this.showd=true;
             this.value=0;
             console.log("me llega la info de:", this.datos)
-            this.eleccion="negative_value"
+            this.eleccion="positive_value"
             this.crearMapa()
+             
+            
+    //          d3plus.select('#viz')
+    // .call(this.chart.draw, chart)
         },
         methods: {
             modGrafico(){
@@ -65,6 +74,18 @@
                     this.eleccion="positive_value";
                     console.log(this.eleccion);
                 }
+                 let a = document.getElementById('viz')
+                 a.removeChild(a.firstChild);	
+                this.crearMapa()
+            //      this.showd=false;
+                  
+            // this.$nextTick(() => {
+            //         this.showd = true
+            //         console.log('re-render start')
+            //         this.$nextTick(() => {
+            //             console.log('re-render end')
+            //         })
+            //          })
             },
 
             /*  Funcion que demuestra que no funciona el evento :c  */
@@ -88,7 +109,8 @@
                 /*    Datos pasados por la vista externa bind  (llegan bien)       */
                 var popData = this.datos
 
-                var chart = new d3plus.Geomap()
+               
+                this.chart = new d3plus.Geomap()
                 /*.width()
                 .height()*/
                     .data(popData)
@@ -140,11 +162,15 @@
                         }
                     })
 
-               return  chart
-                    .ocean("transparent")
-                    .colorScaleConfig({color: ["#6a2c70", "#b83b5e", "#f08a5d", "#f9ed69", "#D8F781"]})
-                    .render(); 
-                    console.log("hice el mapa")
+                    this.chart
+                .ocean("transparent")
+                .colorScaleConfig({color: ["#6a2c70", "#b83b5e", "#f08a5d", "#f9ed69", "#D8F781"]}).select('#viz').render();
+                console.log("hice el mapa")
+                //  chart
+                //     .ocean("transparent")
+                //     .colorScaleConfig({color: ["#6a2c70", "#b83b5e", "#f08a5d", "#f9ed69", "#D8F781"]})
+                //     .render(); 
+                
 
             }
         }
@@ -155,4 +181,8 @@
 
 <style scoped>
 
+    #viz{
+        height:1000px;
+        width: 1000px;
+    }
 </style>
