@@ -1,12 +1,29 @@
 <template>
-<div id="register">
-        <h1>Registro</h1>
-        <input type="text" name="username" v-model="input.name" placeholder="Username" />
-        <input type="password" name="password" v-model="input.password" placeholder="Password" />
-        <input type="text" name="email" v-model="input.email" placeholder="email" />
+        
+<div id="register" class = "panel panel-primary">
+
+    <label>Registrar nuevo administrador</label>
+    
+    <br><hr>
+    <div class="panel-body">
         <div>
-            <button type="button" v-on:click="CrearUser()">Registrarse</button>
+            <input type="text" name="username" v-model="input.name" placeholder="Nombre de usuario" />
         </div>
+        <br>
+        <div>
+            <input type="password" name="password" v-model="input.password" placeholder="Contraseña" />
+        </div>
+        <br>
+        <div>
+            <input type="text" name="email" v-model="input.email" placeholder="Correo electrónico" />
+        </div>
+        <br>
+        <div>
+            <button type="button" class="btn btn-secondary" style="border:1px solid #ababae" v-on:click="CrearUser()">
+                Registrar
+            </button>
+        </div>
+    </div>
 </div>
 </template>
 
@@ -61,7 +78,7 @@
         border: 1px solid #CCCCCC;
         background-color: #FFFFFF;
         margin: auto;
-        margin-top: 200px;
+        margin-top: 70px;
         padding: 20px;
     }
 </style>
