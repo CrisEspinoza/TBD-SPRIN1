@@ -6,7 +6,7 @@ import estadisticas from './EstadisticasEquipos.vue'
 import trofeos from './trofeos.vue'
 import ligaChilena from './ligaChilena.vue'
 import Index from './Index.vue';
-import Index_admin from './Index_admin.vue';
+import Index_admin from './index_admin.vue';
 import VueResource from 'vue-resource';
 
 // Vue.component(ChoroplethMap);
