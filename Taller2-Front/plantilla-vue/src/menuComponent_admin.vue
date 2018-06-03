@@ -28,13 +28,20 @@
             </li>
 
             <li role="presentation" class="dropdown" v-on:click="setSelectedComunas">
-                <router-link to="">Mapa Santiago</router-link>
+            <router-link to="">Mapa Santiago</router-link>
             </li>
 
-            <li role="presentation" class="dropdown"  v-on:click="setSelectedLogin">
-            <router-link to="">Login</router-link>
+            <li role="presentation" class="dropdown" v-on:click="setSelectedTools">
+            <router-link to="">Herramientas</router-link>
             </li>
 
+             <li role="presentation" class="dropdown" v-on:click="setSelectedRegister">
+            <router-link to="">Registro</router-link>
+            </li>
+
+            <li role="presentation" class="dropdown"  v-on:click="setSelectedLogout">
+            <router-link to="">Logout</router-link>
+            </li>
 
         </ul>
     </div>
@@ -61,7 +68,10 @@
             <comunas-component v-bind:datos="comunas"></comunas-component>
         </div>
         <div v-if="this.eleccion == 8">
-            <login-component></login-component>
+            <Equipoestadisticascomponente v-bind:datos="clubs"></Equipoestadisticascomponente>
+        </div>
+         <div v-if="this.eleccion == 9">
+            <register-component></register-component>
         </div>
     </div>
 </div>
@@ -86,9 +96,10 @@
     import estadisticasEquipo from './EstadisticasEquipos.vue';
     import ligachilena from './ligaChilena.vue';
     import trofeos from './trofeos.vue';
-    import mapa from './mapa.vue'
+    import mapa from './mapa.vue';
+    import tools_equipos from './tools_equipo.vue';
     import comunas from './mapaComunas.vue';
-    import login from './login.vue';
+    import register from './register.vue';
     export default {
         components: {
             'home-component': home,
@@ -97,8 +108,9 @@
             'EquipoDatacomponente': dataEquipo,
             'Equipoestadisticascomponente': estadisticasEquipo,
             'mapa-component': mapa,
+            'tools-component':tools_equipos,
             'comunas-component': comunas,
-            'login-component':login
+            'register-component':register
         },
         name: "menuComponent.vue",
         data(){
@@ -123,7 +135,7 @@
             console.log("data de mapas obtenida con exito!", this.mapas);
             this.eleccion = 1;
         });
-        this.$http.get("http://159.65.128.52:8080/TBD-G7/maps-santiago").then(response => {
+    this.$http.get("http://159.65.128.52:8080/TBD-G7/maps-santiago").then(response => {
             this.comunas = response.data;
             console.log("club:" + this.comunas);
             console.log("data de mapas obtenida con exito!", this.comunas);
@@ -140,7 +152,6 @@
             },
             setSelectedItem(nombre,equipoid,id){
                 this.eleccion=3;
-
             },
             setSelectedItemE(){
                this.eleccion=4;
@@ -151,20 +162,19 @@
             setSelectedMapas(){
                 this.eleccion=6;
             },
-            setSelectedComunas(){
+             setSelectedComunas(){
                 this.eleccion=7;
             },
-            setSelectedLogin(){
+            setSelectedTools(){
                 this.eleccion=8;
+            },
+            setSelectedRegister(){
+                this.eleccion=9;
+            },
+            setSelectedLogout(){
+                this.$router.replace({ path: "/index" });
             }
 
-        },
-        ready: function() {
-                $('.dropdown-submenu a.test').on("click", function(e){
-                $(this).next('ul').toggle();
-                e.stopPropagation();
-                e.preventDefault();
-            });    
         }
     }
 </script>

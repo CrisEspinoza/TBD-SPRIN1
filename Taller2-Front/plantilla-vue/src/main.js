@@ -6,6 +6,7 @@ import estadisticas from './EstadisticasEquipos.vue'
 import trofeos from './trofeos.vue'
 import ligaChilena from './ligaChilena.vue'
 import Index from './Index.vue';
+import Index_admin from './Index_admin.vue';
 import VueResource from 'vue-resource';
 
 // Vue.component(ChoroplethMap);
@@ -23,7 +24,8 @@ const routes = [
     { path: '/dataEquipo/', component: data },
     { path: '/estadisticas', component: estadisticas},
     { path: '/trofeos', component: trofeos},
-    { path: '/ligaChilena', component: ligaChilena}
+    { path: '/ligaChilena', component: ligaChilena},
+    { path: '/index_admin', component: Index_admin}
 ];
 
 // Create the router instance and pass the `routes` option
