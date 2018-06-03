@@ -27,6 +27,10 @@
             <router-link to="">Mapas</router-link>
             </li>
 
+            <li role="presentation" class="dropdown" v-on:click="setSelectedComunas">
+                <router-link to="">Mapa Santiago</router-link>
+            </li>
+
 
         </ul>
     </div>
@@ -48,6 +52,9 @@
         </div>
         <div v-if="this.eleccion == 6">
             <mapa-component v-bind:datos="mapas"></mapa-component>
+        </div>
+        <div v-if="this.eleccion == 7">
+            <comunas-component v-bind:datos="comunas"></comunas-component>
         </div>
     </div>
 </div>
@@ -73,6 +80,7 @@
     import ligachilena from './ligaChilena.vue';
     import trofeos from './trofeos.vue';
     import mapa from './mapa.vue'
+    import comunas from './mapaComunas.vue'
     export default {
         components: {
             'home-component': home,
@@ -80,14 +88,16 @@
             'Trofeos-component': trofeos,
             'EquipoDatacomponente': dataEquipo,
             'Equipoestadisticascomponente': estadisticasEquipo,
-            'mapa-component': mapa
+            'mapa-component': mapa,
+            'comunas-component': comunas
         },
         name: "menuComponent.vue",
         data(){
             return{
                 eleccion: 0,
                 clubs:null,
-                mapas: null
+                mapas: null,
+                comunas: null
             }
         },
 
@@ -102,6 +112,12 @@
             this.mapas = response.data;
             console.log("club:" + this.mapas);
             console.log("data de mapas obtenida con exito!", this.mapas);
+            this.eleccion = 1;
+        });
+        this.$http.get("http://159.65.128.52:8080/TBD-G7/maps-santiago").then(response => {
+            this.comunas = response.data;
+            console.log("club:" + this.comunas);
+            console.log("data de mapas obtenida con exito!", this.comunas);
             this.eleccion = 1;
         });
     },
@@ -125,6 +141,9 @@
             },
             setSelectedMapas(){
                 this.eleccion=6;
+            },
+            setSelectedComunas(){
+                this.eleccion=7;
             }
 
         },
