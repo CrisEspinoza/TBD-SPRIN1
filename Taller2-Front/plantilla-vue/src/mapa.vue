@@ -184,7 +184,7 @@
 
                     this.chart
                 .ocean("transparent")
-                .colorScaleConfig({color: ["#D8F781", "#f9ed69", "#f08a5d", "#b83b5e", "#6a2c70"]}).select('#viz').render();
+                .colorScaleConfig({scale: "jenks", color: ["#D8F781", "#f9ed69", "#f08a5d", "#b83b5e"]}).select('#viz').render();
                 //  chart
                 //     .ocean("transparent")
                 //     .colorScaleConfig({color: ["#6a2c70", "#b83b5e", "#f08a5d", "#f9ed69", "#D8F781"]})
