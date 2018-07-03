@@ -1,6 +1,6 @@
 <template>
         
-<div id="register" class = "panel panel-primary">
+<div class = "panel panel-primary">
 
     <label>Registrar nuevo administrador</label>
     
@@ -51,7 +51,7 @@
                         email: this.input.email
                     }
                     console.log(json)
-                    this.$http.post("http://159.65.128.52:8080/TBD-G7/user",json).then(response => {
+                    this.$http.post("http://206.189.184.79:8091/TDBG7/user",json).then(response => {
                         this.respuesta = response.data;
                         this.input.name = ""
                         this.input.password = ""

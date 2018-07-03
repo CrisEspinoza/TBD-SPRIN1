@@ -1,31 +1,25 @@
 <template>
-<div class="row">
+<div>
   <br>
 
-  <div class="">
-  <label class="">Gráfico del club {{datos[this.value].name}}</label>
-      <div style="float:right;">
+  <label>Gráfico del club {{datos[this.value].name}}</label>
+<br><br><br>
+  <div style="float:right;">
     <label  for="select" >Seleccione un equipo:</label>
+    <br><br>
         <div class="styled-select slate">
     <select @change="modificarGrafico" v-model="value"  name="" id="select">
         <option v-if="i!==16" :key="i" :value="i" v-for="(equipo,i) in datos">{{equipo.name}}</option>
     </select>
         </div>
-
-      </div>
+    <br><br>
   </div>
-  <br><br>
-  <hr>
-  <br><br>
-
   <div v-if="this.showd">
   <div style="width:50%; float: left;"  >
+    <br><br><br><br><br><br>
     <vue-chart   v-if="this.chartData !== null " type="horizontalBar" v-bind:data="this.chartData"></vue-chart>
     <div v-else>
       <div class=" lds-css ng-scope">
-        <div style="width:100%;height:100%" class="lds-bars">
-          <div></div><div></div><div></div><div></div> <div></div>
-        </div>
       </div>
     </div>
 
@@ -36,15 +30,13 @@
     <vue-chart  v-if="this.chartData !== null" type="line" :data="this.chartData"></vue-chart>
     <div v-else>
       <div class=" lds-css ng-scope">
-        <div style="width:100%;height:100%" class="lds-bars">
-          <div></div><div></div><div></div><div></div> <div></div>
-        </div>
       </div>
     </div>
 
   </div>
   </div>
-  <div style="width:100%; float: left;"  >
+  <div>
+    <br><br><br><br><br>
     <h1>Descripción:</h1>
 
     <p> "Este gráfico muestra la cantidad de comentarios positivos como negativos de un equipo en especifico en un determinado
@@ -63,7 +55,6 @@
     export default {
         name: "App",
         value:{},
-       
         props:['datos'],
         components: {
             VueChart
@@ -134,6 +125,11 @@
 
         },
 
+        cortarString(string){
+            var a = string.split('T')
+            return a[0];
+        },
+
 
         crearGrafico()
         {
@@ -164,15 +160,13 @@
             /* Largo  */
             console.log("aaaa"+this.datos[this.value])
             var tam = this.datos[this.value].statistics.length
-            console.log("el timestamp que quiero cambiar es: ", this.datos[this.value].statistics[tam - 1].lastUpdate)
 
-            console.log("el timestamp cambiado es: ", this.timeConverter(this.datos[this.value].statistics[tam - 1].lastUpdate))
             /*Primer elemento de fecha*/
-            chartData.labels.push(this.timeConverter(this.datos[this.value].statistics[0].lastUpdate))
+            chartData.labels.push(this.cortarString(this.datos[this.value].statistics[0].lastUpdate))
             /*Segundo elemento intermedio de fecha*/
-            chartData.labels.push(this.timeConverter(this.datos[this.value].statistics[Math.trunc(tam / 2)].lastUpdate))
+            chartData.labels.push(this.cortarString(this.datos[this.value].statistics[Math.trunc(tam / 2)].lastUpdate))
             /*Ultima fecha*/
-            chartData.labels.push(this.timeConverter(this.datos[this.value].statistics[tam - 1].lastUpdate))
+            chartData.labels.push(this.cortarString(this.datos[this.value].statistics[tam - 1].lastUpdate))
 
             /**Comentarios positivos/
              /*Primer elemento de fecha*/
@@ -189,7 +183,7 @@
            chartData.datasets[1].data.push(this.datos[this.value].statistics[Math.trunc(tam / 2)].negative_value)
             /*Ultima fecha*/
             chartData.datasets[1].data.push(this.datos[this.value].statistics[tam - 1].negative_value)
-            console.log("modificado"+chartData)
+
             return chartData;
         },
 

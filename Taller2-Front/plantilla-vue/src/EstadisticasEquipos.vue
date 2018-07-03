@@ -1,41 +1,41 @@
 <template>
     <div>
         <br>
-         <div class="">
-            <label class="">Gráfico del club {{datos[this.value].name}}</label>
-            <div style="float:right;">
-                <label for="select">Seleccione un equipo:</label>
-                <div class="styled-select slate">
+
+        <label>Gráfico del club {{datos[this.value].name}}</label>
+        <br><br><br>
+        <div style="float:right;">
+            <label  for="select" >Seleccione un equipo:</label>
+            <br><br>
+            <div class="styled-select slate">
                 <select @change="modificarGrafico" v-model="value"  name="" id="select">
                     <option v-if="i!==16" :key="i" :value="i" v-for="(equipo,i) in datos">{{equipo.name}}</option>
                 </select>
-                </div>
             </div>
-          </div>
-        <br><br>
-        <hr>
-        <br><br>
-
-        <div  v-if="this.showd" style="width:50%; float: left;"  >
-
-            <vue-chart   v-if="this.chartData !== null"  type="line" :data="this.chartData"></vue-chart>
-            <div v-else>
-                <div class=" lds-css ng-scope">
-                    <div style="width:100%;height:100%" class="lds-bars">
-                        <div></div><div></div><div></div><div></div> <div></div>
+            <br><br>
+        </div>
+        <div v-if="this.showd">
+            <div style="width:50%; float: left;"  >
+                <br><br><br><br>
+                <vue-chart   v-if="this.chartData !== null " type="line" v-bind:data="this.chartData"></vue-chart>
+                <div v-else>
+                    <div class=" lds-css ng-scope">
                     </div>
                 </div>
+
             </div>
-
         </div>
-
         <div>
-            <h2>Descripción:</h2>
+            <br><br><br><br><br>
+            <h1>Descripción:</h1>
 
-            <h4> "En estos gráficos se puede observar la relación existente entre los tweets obtenidos por cada equipo
-                de la primera divisón de la liga chilena con respecto al total de tweets."
-            </h4>
+            <p> "Este gráfico muestra la cantidad de comentarios positivos como negativos de un equipo en especifico en un determinado
+                tiempo.
+                Dichos comentarios están epresentados en un gráfico de barras y un gráfico de torta. Los colores que toman cada tipo
+                de comentario son verde y rojo respectivamente. "
+            </p>
         </div>
+
     </div>
 </template>
 
@@ -43,139 +43,140 @@
 <script>
     import VueChart from "vue-chart-js";
     export default {
-        name: "uDeChile",
+        name: "App",
+        value:{},
         props:['datos'],
         components: {
             VueChart
         },
 
         data: () => ({
-        chartData: null,
-        value:{},
-        showd:false,
-        barra: true,
-        torta: false,
-        clubs: []
+            chartData: null,
+            showd:null,
+            barra: true,
+            torta: false,
+        }),
 
-    }),
-
-    created() {
-        this.showd=true;
-         this.value=0;
-        console.log("estoy creando");
-        this.chartData=this.crearGrafico();
-        console.log("grafico creado", this.chartData);
-    },
-  
+        created() {
+            this.showd=true;
+            console.log("estoy creando");
+            this.value=0;
+            this.chartData=this.crearGrafico();
+            console.log("grafico creado", this.chartData);
+        },
 
 
-    methods: {
-         modificarGrafico(){
-            console.log("*********"+this.datos);
-            this.showd=false;
-           this.chartData= this.crearGrafico();
-           console.log(this.chartData.datasets[0].data);
-           this.showd=false;
-            this.$nextTick(() => {
+        computed:{
+
+        },
+        methods: {
+            modificarGrafico(){
+                this.showd=false;
+                this.chartData= this.crearGrafico();
+                console.log(this.chartData.datasets[0].data);
+                this.showd=false;
+                this.$nextTick(() => {
                     this.showd = true
                     console.log('re-render start')
                     this.$nextTick(() => {
                         console.log('re-render end')
                     })
-                     })
-        },
+                })
+            },
 
-        mostrarBarra()
-        {
-            this.barra = true;
-            this.torta = false;
+            mostrarBarra()
+            {
+                this.barra = true;
+                this.torta = false;
+
+            }
+            ,
+            mostrarTorta()
+            {
+                this.barra = false;
+                this.torta = true;
+
+            }
+            ,
+            timeConverter(timestamp){
+                var ent = parseInt(timestamp);
+                var a = new Date(ent);
+                var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                var year = a.getFullYear();
+                var month = months[a.getMonth()];
+                var date = a.getDate();
+                var hour = a.getHours();
+                var min = a.getMinutes();
+                var sec = a.getSeconds();
+                var time = date + ' ' + month + ' ' + year  ;
+                console.log("el tiempo que va a salir es; ", time);
+                return (time);
+
+            },
+
+            cortarString(string){
+                var a = string.split('T')
+                return a[0];
+            },
+
+            crearGrafico()
+            {
+                console.log(this.value)
+                let chartData = {
+                    labels: [],
+                    datasets: [
+                        {
+                            title: "Gráfico por fechas, popularidad del club",
+                            data: [],
+                            label: ["Equipo de la liga"],
+                            fill: false,
+                            borderColor: "red",
+                            backgroundColor: "red",
+                            pointBackgroundColor: ["blue", "green", "gray"]
+                        },
+                        {
+                            data: [],
+                            label: ["Promedio de la liga"],
+                            fill: false,
+                            borderColor: "blue",
+                            backgroundColor: "blue",
+                            pointBackgroundColor: ["red", "green", "gray"]
+                        },
+
+
+                    ]
+
+                };
+                /* Largo  */
+                var tam = this.datos[this.value].statistics.length
+
+                /*Primer elemento de fecha*/
+                chartData.labels.push(this.cortarString(this.datos[this.value].statistics[0].lastUpdate))
+                /*Segundo elemento intermedio de fecha*/
+                chartData.labels.push(this.cortarString(this.datos[this.value].statistics[2].lastUpdate))
+                /*Ultima fecha*/
+                chartData.labels.push(this.cortarString(this.datos[this.value].statistics[3].lastUpdate))
+
+                /**Comentarios positivos/
+                 /*Primer elemento de fecha*/
+                chartData.datasets[0].data.push(this.datos[this.value].statistics[0].positive_value)
+                /*Segundo elemento intermedio de fecha*/
+                chartData.datasets[0].data.push(this.datos[this.value].statistics[2].positive_value)
+                /*Ultima fecha*/
+                chartData.datasets[0].data.push(this.datos[this.value].statistics[3].positive_value)
+
+                /**Comentarios negativos/
+                 /*Primer elemento de fecha*/
+                chartData.datasets[1].data.push(this.datos[16].statistics[0].positive_value)
+                /*Segundo elemento intermedio de fecha*/
+                chartData.datasets[1].data.push(this.datos[16].statistics[2].positive_value)
+                /*Ultima fecha*/
+                chartData.datasets[1].data.push(this.datos[16].statistics[3].positive_value)
+
+                return chartData;
+            },
 
         }
-    ,
-        mostrarTorta()
-        {
-            this.barra = false;
-            this.torta = true;
-
-        }
-    ,
-
-        timeConverter(timestamp){
-            var ent = parseInt(timestamp);
-            var a = new Date(ent);
-            var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-            var year = a.getFullYear();
-            var month = months[a.getMonth()];
-            var date = a.getDate();
-            var hour = a.getHours();
-            var min = a.getMinutes();
-            var sec = a.getSeconds();
-            var time = date + ' ' + month + ' ' + year;
-            console.log("el tiempo que va a salir es; ", time);
-            return (time);
-
-        },
-
-        crearGrafico()
-        {
-            console.log("*******values es :"+ this.value)
-            let chartData = {
-                labels: [],
-                datasets: [
-                    {
-                        title: "Gráfico por fechas, popularidad del club",
-                        data: [],
-                        label: ["Equipo de la liga"],
-                        fill: false,
-                        borderColor: "red",
-                        backgroundColor: "red",
-                        pointBackgroundColor: ["blue", "green", "gray"]
-                    },
-                    {
-                        data: [],
-                        label: ["Promedio de la liga"],
-                        fill: false,
-                        borderColor: "blue",
-                        backgroundColor: "blue",
-                        pointBackgroundColor: ["red", "green", "gray"]
-                    },
-
-
-                ]
-
-            };
-            /* Largo  */
-            var tam = this.datos[this.value].statistics.length
-            console.log("estoy trabjando con el club:", this.datos[this.value].name)
-            /*Primer elemento de fecha*/
-            chartData.labels.push(this.timeConverter(this.datos[this.value].statistics[0].lastUpdate))
-            /*Segundo elemento intermedio de fecha*/
-            chartData.labels.push(this.timeConverter(this.datos[this.value].statistics[Math.trunc(tam / 2)].lastUpdate))
-            /*Ultima fecha*/
-            chartData.labels.push(this.timeConverter(this.datos[this.value].statistics[tam - 1].lastUpdate))
-            // console.log("Los datos obtenidos son:", this.chartData.labels)
-
-            /**Comentarios positivos/
-             /*Primer elemento de fecha*/
-            chartData.datasets[0].data.push(this.datos[this.value].statistics[0].positive_value)
-            /*Segundo elemento intermedio de fecha*/
-            chartData.datasets[0].data.push(this.datos[this.value].statistics[Math.trunc(tam / 2)].positive_value)
-            /*Ultima fecha*/
-            chartData.datasets[0].data.push(this.datos[this.value].statistics[tam - 1].positive_value)
-
-            /**Comentarios positivos/
-             /*Primer elemento de fecha*/
-            chartData.datasets[1].data.push(this.datos[16].statistics[0].positive_value)
-            /*Segundo elemento intermedio de fecha*/
-            chartData.datasets[1].data.push(this.datos[16].statistics[Math.trunc(tam / 2)].positive_value)
-            /*Ultima fecha*/
-            chartData.datasets[1].data.push(this.datos[16].statistics[tam - 1].positive_value)
-            return chartData;
-        },
-
-
-
-    }
 
     };
 </script>

@@ -1,73 +1,96 @@
 <template>
-<div id="login" class = "panel panel-primary">
-
-    <label>Inicio sesión administrador</label>
-    
-    <br><hr>
-    <div class="panel-body">
-        <div>
-            <input type="text" name="username" v-model="input.email" placeholder="Correo electrónico" />
-        </div>
-        <br>
-        <div>
-        <input type="password" name="password" v-model="input.password" placeholder="Contraseña" />
-        </div>
-        <br>
-        <div>
-            <button type="button" class="btn btn-secondary" style="border:1px solid #ababae" v-on:click="login()">
-                Ingresar
-            </button>
-        </div>
-    </div>
-</div>
+  <div class="login-wrapper border border-light">
+    <form class="form-signin" @submit.prevent="login">
+      <h2 class="form-signin-heading">Login Administrador</h2>
+      <label for="inputEmail" class="sr-only">Correo Electronico</label>
+      <input v-model="email" type="text" id="inputEmail" class="form-control" placeholder="Correo electronico">
+      <label for="inputPassword" class="sr-only">Contraseña</label>
+      <input v-model="password" type="password" id="inputPassword" class="form-control" placeholder="Contraseña">
+      <button class="btn btn-lg btn-primary btn-block" type="submit" v-on:click="login()">Ingresar</button>
+    </form>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: 'Login',
-        data() {
-            return {
-                respuesta: {},
-                admin: 'admin',
-                pass: 123,
-                input: {
-                    email: "",
-                    password: ""
-                }
-            }
-        },
-        methods: {
-            login() {
-                if(this.input.email != "" && this.input.password != "") {
-                    let json = {
-                        email: this.input.email,
-                        password: this.input.password
-                    } 
-                    this.$http.post("http://159.65.128.52:8080/TBD-G7/user/auth",json).then(response => {
-                        this.respuesta = response.data;
-                        console.log(this.respuesta)
-                        if(this.respuesta.id != null){
-                             this.$router.replace({ path: "/index_admin" });
-                        }
-                        else{
-                            console.log("El user o la clave se encuentran mal ingresadas");
-                        }
-                    });
-                } else {
-                    console.log("No se ingreso user o no se ingreso clave");
-                }
+export default {
+  name: 'Login',
+  data () {
+    return {
+        email: '',
+        password: '',
+        respuesta: {},
+        admin: 'admin',
+        pass: 123,
+    }
+  },
+ methods: {
+        login() {
+            if(this.email != "" && this.password != "") {
+                let json = {
+                    email: this.email,
+                    password: this.password
+                } 
+                var url = "http://206.189.184.79:8091/TDBG7/user/auth"
+                this.$http.post(url,json).then(response => {
+                    this.respuesta = response.data;
+                    console.log(this.respuesta)
+                    if(this.respuesta.id != null){
+                            this.$router.replace({ path: "/Admin" });
+                    }
+                    else{
+                        console.log("El user o la clave se encuentran mal ingresadas");
+                    }
+                });
+            } else {
+                console.log("No se ingreso user o no se ingreso clave");
             }
         }
     }
+}
 </script>
 
-<style scoped>
-    #login {
-        width: 500px;
-        border: 1px solid #CCCCCC;
-        background-color: #FFFFFF;
-        margin: auto;
-        margin-top: 70px;
-        padding: 20px;
-    }
+<style lang="css">
+body {
+  background: #605B56;
+}
+
+.login-wrapper {
+  background: #fff;
+  width: 70%;
+  margin: 12% auto;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 10% 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
 </style>

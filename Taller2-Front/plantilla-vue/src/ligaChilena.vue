@@ -112,7 +112,8 @@ export default {
                   {
                       label: ["Promedio de comentarios positivos","Promedio de comentarios negativos"],
                       backgroundColor: ["#56FB4C", "#FB5C57"],
-                      data: [this._props.datos[16].statistics[0].positive_value, this._props.datos[16].statistics[0].negative_value]
+                      data: [this._props.datos[16].statistics[0].positive_value,
+                          this._props.datos[16].statistics[0].negative_value]
                   },
 
               ]

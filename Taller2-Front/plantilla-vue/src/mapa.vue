@@ -2,20 +2,17 @@
 
     <div class="">
         <label class="">Mapa de aceptación:</label>
+        <br><br>
         <div style="float:right;">
             <label for="select">Seleccione un criterio:</label>
             <div class="styled-select slate">
                 <select @change="modGrafico" v-model="value" name="" id="select">
-<!--                No se reconoce el evento de cambio en la variable                                           -->
-                    <!-- <option v-on:click = "eventMouse">chikjhgvfhujikojhg</option> -->
-
-                    <option  value="1">comentarios positivos</option>
-
-                    <option  value="2">comentarios negativos</option>
+                    <option  value="1">Comentarios positivos</option>
+                    <option  value="2">Comentarios negativos</option>
                 </select>
             </div>
+            <br><br>
         </div>
-
         <div class="embed-responsive" v-if="this.showd" id="viz">
 
         </div>
