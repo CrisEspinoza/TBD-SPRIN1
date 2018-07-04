@@ -6,7 +6,7 @@
       <input v-model="email" type="text" id="inputEmail" class="form-control" placeholder="Correo electronico">
       <label for="inputPassword" class="sr-only">Contraseña</label>
       <input v-model="password" type="password" id="inputPassword" class="form-control" placeholder="Contraseña">
-      <button class="btn btn-lg btn-primary btn-block" type="submit" v-on:click="login()">Ingresar</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" v-on:click.prevent="login()">Ingresar</button>
     </form>
   </div>
 </template>
@@ -35,14 +35,15 @@ export default {
                     this.respuesta = response.data;
                     console.log(this.respuesta)
                     if(this.respuesta.id != null){
-                            this.$router.replace({ path: "/Admin" });
+                            console.log("ingrese a emitir el mensaje a padre")
+                            this.$emit('login:change')
                     }
                     else{
-                        console.log("El user o la clave se encuentran mal ingresadas");
+                        alert("El user o la clave se encuentran mal ingresadas");
                     }
                 });
             } else {
-                console.log("No se ingreso user o no se ingreso clave");
+                alert("No se ingreso user o no se ingreso clave");
             }
         }
     }
